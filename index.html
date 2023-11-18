@@ -3,46 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce</title>
+    <title>Home</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
+      href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">E- <span>Commerce</span> </a>
+    <!--
+      • Menu principal
+      • Banner na forma de carrossel de imagens
+      • Produtos em destaque
+      • Rodapé com informações de contato
+    -->
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#produtos" class="nav__link">Produtos</a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#carrinho" class="nav__link">Carrinho</a>
-            </li>
+    <div>
+      <header>
+        <!-- MENU -->
+        <nav>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#produtos.html">Produtos</a></li>
+            <li><a href="#carrinho">Carrinho</a></li>
+            <li><a href="#cadastrar">Cadastrar</a></li>
           </ul>
+        </nav>
+      </header>
 
-          <!-- Botão fechar -->
-          <div class="nav__close" id="nav-close">
-            <i class="ri-close-line"></i>
-          </div>
+      <main>
+        <section>
+          <!-- CARROSSEL -->
+        </section>
+
+        <section>
+          <!-- PRODUTOS EM DESTAQUE -->
+        </section>
+      </main>
+
+      <footer>
+        <img src="logo" alt="Logo do E-commerce" />
+        <div>
+          <span>Links rápidos</span>
+          <ul>
+            <ul>
+              <li><a href="#">Início</a></li>
+              <li><a href="#produtos.html">Produtos</a></li>
+              <li><a href="#carrinho">Carrinho</a></li>
+              <li><a href="#cadastrar">Cadastrar</a></li>
+            </ul>
+          </ul>
         </div>
 
-        <!-- Alterar Botão -->
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-line"></i>
+        <div>
+          <span>Encontre-nos</span>
+          <ul>
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Email: contato@contato.com</a></li>
+            <li><a href="#">Av.7 de Setembro, Nº 00, Centro</a></li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <script src="assets/js/script.js"></script>
+      </footer>
+    </div>
+
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
