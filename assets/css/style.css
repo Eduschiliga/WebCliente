@@ -2,7 +2,7 @@
   height: 650px;
 }
 
-.nav-heigth {
+.nav-h {
   height: 85px;
 }
 
@@ -24,6 +24,14 @@
     height: 550px;
   }
   
+  .preco {
+    font-size: 1.6em;
+  }
+
+  .preco del {
+    font-size: 1em;
+  }
+
   body {
     background-color: blueviolet;
   }
@@ -46,21 +54,6 @@
 
 /* Grande (lg) */
 @media screen and (min-width: 992px) {
-
-  .nav-item {
-    margin: 0 auto;
-  }
-
-  .btn {
-    margin: 0 auto;
-  }
-
-  #navbarNav .navbar-nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .custom-img {
     height: 300px;
   }
