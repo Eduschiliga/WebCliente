@@ -19,12 +19,18 @@
   width: 100%;
 }
 
+.w600 {
+  width: 600px;
+}
+
 .card-fixed {
-  height: 500px;
+  width: 250px;
+  height: 430px;
 }
 
 .card-fixed img {
   height: 200px;
+  width: 250px;
   object-fit: cover;
 }
 

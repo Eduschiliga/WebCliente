@@ -17,17 +17,17 @@
         >
           <ul class="list-unstyled d-flex align-items-center m-1">
             <li class="p-2 m-2">
-              <a href="#index.html" class="text-decoration-none text-white"
+              <a href="index.html" class="text-decoration-none text-white"
                 >Início</a
               >
             </li>
             <li class="p-2 m-2">
-              <a href="#produtos.html" class="text-decoration-none text-white"
+              <a href="./assets/pages/produtos.html" class="text-decoration-none text-white"
                 >Produtos</a
               >
             </li>
             <li class="p-2 m-2">
-              <a href="#carrinho.html" class="text-decoration-none text-white"
+              <a href="./assets/pages/carrinho.html" class="text-decoration-none text-white"
                 >Carrinho</a
               >
             </li>
@@ -125,130 +125,68 @@
         <section class="mb-5">
           <!-- PRODUTOS EM DESTAQUE -->
           <h2 class="m-5 mb-md-0 text-center">Produtos em Destaque!</h2>
-          <div class="container p-5">
-            <div class="row gap-3 mb-3">
-              <div class="col-12 col-md p-0">
-                <!-- Conteúdo da primeira coluna aqui -->
-                <div class="card card-fixed shadow border-0 m-0">
-                  <div
-                    class="bg-image hover-overlay ripple d-flex justify-content-center"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="assets/img/produtos/barraca/tipo-1/img1.jpg"
-                      class="img-fluid rounded"
-                    />
-                  </div>
-                  <div
-                    class="card-body bg-light d-flex justify-content-center flex-column"
-                  >
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <p class="text-success text-center fw-bold preco">
-                      R$100,00<sup
-                        ><del class="text-danger fw-bold">R$150,00</del></sup
-                      >
-                    </p>
-                    <a href="#!" class="btn btn-success">Comprar</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md p-0">
-                <!-- Conteúdo da segunda coluna aqui -->
-                <div class="card card-fixed shadow border-0 m-0">
-                  <div
-                    class="bg-image hover-overlay ripple d-flex justify-content-center"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="assets/img/produtos/barraca/tipo-2/img1.jpg"
-                      class="img-fluid rounded"
-                    />
-                  </div>
-                  <div
-                    class="card-body bg-light d-flex justify-content-center flex-column"
-                  >
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <p class="text-success text-center fw-bold preco">
-                      R$100,00<sup
-                        ><del class="text-danger fw-bold">R$150,00</del></sup
-                      >
-                    </p>
-                    <a href="#!" class="btn btn-success">Comprar</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md p-0">
-                <!-- Conteúdo da terceira coluna aqui -->
-                <div class="card card-fixed shadow border-0 m-0">
-                  <div
-                    class="bg-image hover-overlay ripple d-flex justify-content-center"
-                    data-mdb-ripple-color="light"
-                  >
-                    <img
-                      src="assets/img/produtos/barraca/tipo-3/img1.jpg"
-                      class="img-fluid rounded"
-                    />
-                  </div>
-                  <div
-                    class="card-body bg-light d-flex justify-content-center flex-column"
-                  >
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <p class="text-success text-center fw-bold preco">
-                      R$100,00<sup
-                        ><del class="text-danger fw-bold">R$150,00</del></sup
-                      >
-                    </p>
-                    <a href="#!" class="btn btn-success">Comprar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="container-fluid">
+            <div class="row g-3 align-items-center">
 
-            <div class="row">
-              <div class="col-12 shadow-lg rounded p-3">
-                <!-- Conteúdo da primeira coluna aqui -->
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <img
-                      src="assets/img/computador.jpg"
-                      alt=""
-                      class="img-fluid rounded"
-                    />
-                  </div>
-                  <div
-                    class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <h2 class="w100 mb-3">Lorem, ipsum.</h2>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quaerat repudiandae beatae a, voluptas optio aliquam?
-                      Itaque dolor libero distinctio, aperiam odit
-                      necessitatibus porro veniam unde quas, hic ex, qui
-                      numquam.
-                    </p>
-                    <p class="text-success text-center fw-bold preco">
-                      R$100,00<sup
-                        ><del class="text-danger fw-bold">R$150,00</del></sup
-                      >
-                    </p>
-
-                    <a href="#!" class="btn btn-success p-2 w100">Comprar</a>
+              <div class="col">
+                <div class="card-fixed rounded bg-light shadow">
+                  <img src="assets/img/computador.jpg" alt="" class="rounded">
+                  <div class="d-flex flex-column p-2">
+                    <h3>Nome Produto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, maiores.</p>
+                    <div>
+                      <h6>Avaliações</h6>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-regular fa-star fa-2xs"></i>
+                      <i class="fa-regular fa-star fa-2xs"></i>
+                    </div>
+                    <button type="button" class="btn btn-success">Comprar</button>
                   </div>
                 </div>
               </div>
+
+              <div class="col">
+                <div class="card-fixed rounded bg-light shadow">
+                  <img src="assets/img/computador.jpg" alt="" class="rounded">
+                  <div class="d-flex flex-column p-2">
+                    <h3>Nome Produto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, maiores.</p>
+                    <div>
+                      <h6>Avaliações</h6>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-regular fa-star fa-2xs"></i>
+                      <i class="fa-regular fa-star fa-2xs"></i>
+                    </div>
+                    <button type="button" class="btn btn-success">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card-fixed rounded bg-light shadow">
+                  <img src="assets/img/computador.jpg" alt="" class="rounded">
+                  <div class="d-flex flex-column p-2">
+                    <h3>Nome Produto</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, maiores.</p>
+                    <div>
+                      <h6>Avaliações</h6>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-solid fa-star fa-2xs" style="color: #fbff0a;"></i>
+                      <i class="fa-regular fa-star fa-2xs"></i>
+                      <i class="fa-regular fa-star fa-2xs"></i>
+                    </div>
+                    <button type="button" class="btn btn-success">Comprar</button>
+                  </div>
+                </div>
+              </div>
+
             </div>
+            
           </div>
         </section>
       </main>
