@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 .custom-img {
   height: 650px;
 }
@@ -11,19 +20,23 @@
 }
 
 .card-fixed {
-  height: 500px; 
+  height: 500px;
 }
+
 .card-fixed img {
-  height: 200px; 
+  height: 200px;
   object-fit: cover;
 }
 
+.cad-form {
+  width: 600px;
+}
 
 @media screen and (max-width: 768px) {
   .custom-img {
     height: 550px;
   }
-  
+
   .preco {
     font-size: 1.6em;
   }
@@ -38,7 +51,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .preco {
     font-size: 1.3em;
   }
@@ -73,7 +85,6 @@
 
 /* Extra grande (xl) */
 @media screen and (min-width: 1200px) {
-
   .preco {
     font-size: 1.8em;
   }
@@ -84,5 +95,5 @@
 
   body {
     background-color: lavender;
-  } 
+  }
 }
