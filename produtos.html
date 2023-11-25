@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/produtos/EstiloFiltro.css" />
     <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css" />
     <link rel="stylesheet" href="assets/css/metodos-pag/EstiloMetodosPag.css" />
+    <link rel="stylesheet" href="assets/css/modal/EstiloModal.css" />
     <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
@@ -58,10 +59,39 @@
         </div>
 
         <div class="container-produtos" id="containerProdutos">
-          <div class="card" id="produto1">
-            <img src="assets/img-produtos/notebook.jpg" alt="" />
+          <div class="card">
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+              <div class="modal-header">
+                <h2>Este é o meu modal</h2>
+                <button id="close-modal">Fechar</button>
+              </div>
+
+              <div class="modal-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ipsam consequatur harum voluptates, architecto facilis
+                  corporis officia, dignissimos repellendus explicabo quaerat
+                  distinctio aut fugit, esse cumque iste in voluptatibus tempore
+                  autem!
+                </p>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ipsam consequatur harum voluptates, architecto facilis
+                  corporis officia, dignissimos repellendus explicabo quaerat
+                  distinctio aut fugit, esse cumque iste in voluptatibus tempore
+                  autem!
+                </p>
+              </div>
+            </div>
+            <img
+              src="assets/img-produtos/notebook.jpg"
+              alt=""
+              class="#open-modal-img"
+            />
             <div class="card-content">
-              <h3>Abacaxi</h3>
+              <h3 class="#open-modal-nome">Abacaxi</h3>
               <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
               <span
                 >R$ <span id="precoInteiro">120</span
@@ -316,6 +346,7 @@
 
     <script src="assets/js/menu/MenuScript.js"></script>
     <script src="assets/js/produtos/ProdutosJs.js"></script>
+    <script src="assets/js/modal/modalScript.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
