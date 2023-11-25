@@ -1,0 +1,56 @@
+.container-form {
+  margin-block: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 500px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+label,
+input[type="submit"] {
+  font-weight: bold;
+}
+
+input,
+select {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 3px;
+}
+
+input[type="button"] {
+  background-color: blue;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#msgError,
+#msgSuccess {
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgError {
+  color: #ff0000;
+  background-color: #ffbbbb;
+}
+
+#msgSuccess {
+  color: #00bb00;
+  background-color: #bbffbe;
+}

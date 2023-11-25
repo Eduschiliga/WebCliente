@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css" />
+    <link rel="stylesheet" href="assets/css/carrossel/EstiloCarrossel.css" />
+    <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css" />
+    <link rel="stylesheet" href="assets/css/metodos-pag/EstiloMetodosPag.css" />
+    <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <span id="nomeUser" class="nome-usuario"></span>
+        <button class="hamburger"></button>
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Carrinho</a></li>
+          <li>
+            <a href="formulario.html" class="cadastrar" id="cadastrarUser"
+              >Cadastrar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- CARROSSEL -->
+      <section class="container-carrossel">
+        <button id="prev-button">
+          <img src="assets/img-carrossel/arrow.png" alt="Botão voltar" />
+        </button>
+        <div class="container-images">
+          <img
+            src="assets/img-carrossel/thumb.png"
+            alt="girl"
+            class="carrossel on"
+          />
+          <img
+            src="assets/img-carrossel/thumbKurumi.png"
+            alt="girl"
+            class="carrossel"
+          />
+        </div>
+        <button id="next-button">
+          <img src="assets/img-carrossel/arrow.png" alt="Botão avançar" />
+        </button>
+      </section>
+
+      <!-- MÉTODOS DE PAGAMENTO -->
+      <section>
+        <h2>Meios de Pagamento</h2>
+
+        <div class="container-pag">
+          <div class="content-pag">
+            <div class="meio-pag">
+              <img
+                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg"
+                alt="Cratão de Crédito"
+              />
+              <h3>Cartões de Crédito</h3>
+            </div>
+
+            <span class="pag-descr">Em produtos selecionados</span>
+            <span class="pag-descr">Aprovação imediata.</span>
+          </div>
+
+          <div class="content-pag">
+            <div class="meio-pag">
+              <img
+                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/debit-card.svg"
+                alt="Cratão de Crédito"
+              />
+              <h3>Cartões de Débito</h3>
+            </div>
+
+            <span class="pag-descr">Aprovação imediata.</span>
+          </div>
+
+          <div class="content-pag">
+            <div class="meio-pag">
+              <img
+                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/qr.svg"
+                alt="Cratão de Crédito"
+              />
+              <h3>Pix</h3>
+            </div>
+
+            <span class="pag-descr"
+              >Você pode pagar a qualquer momento com seu código, sem custo
+              adicional e o seu crédito é na hora.</span
+            >
+          </div>
+
+          <div class="content-pag">
+            <div class="meio-pag">
+              <img
+                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/ticket.svg"
+                alt="Cratão de Crédito"
+              />
+              <h3>Boleto Bancário</h3>
+            </div>
+
+            <span class="pag-descr"
+              >Ao comprar explicaremos como fazer o pagamento em qualquer
+              agência bancária, caixa eletrônico, Internet Banking ou
+              correspondentes bancários.</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUTOS DESTAQUE -->
+      <section>
+        <h1>Produtos Destaque</h1>
+        <article class="container-produtos">
+          <div class="produto-1">
+            <h3 class="titulo">Nome Produto</h3>
+            <img
+              src="assets/img-produtos/notebook.jpg"
+              alt="Produto 1"
+              class="img-produto"
+            />
+            <div class="container-descricao">
+              <p class="descricao">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus officiis totam nihil est expedita doloribus,
+                delectus tempora optio doloremque facere deleniti aliquam sed
+                magni aut enim id voluptate vitae dolorem!
+              </p>
+
+              <div class="container-preco">
+                <p>DE</p>
+                <p class="preco-novo">R$ 99,99</p>
+                <p>POR</p>
+                <del class="preco-antigo">R$ 150,00</del>
+              </div>
+            </div>
+            <button class="btn-conferir">
+              <a href="produtos.html">Conferir Oferta</a>
+            </button>
+          </div>
+
+          <div class="produto-2">
+            <h3 class="titulo">Nome Produto</h3>
+            <img
+              src="assets/img-produtos/notebook.jpg"
+              alt="Produto 1"
+              class="img-produto"
+            />
+            <div class="container-descricao">
+              <p class="descricao">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus officiis totam nihil est expedita doloribus,
+                delectus tempora optio doloremque facere deleniti aliquam sed
+                magni aut enim id voluptate vitae dolorem!
+              </p>
+
+              <div class="container-preco">
+                <p>DE</p>
+                <p class="preco-novo">R$ 99,99</p>
+                <p>POR</p>
+                <del class="preco-antigo">R$ 150,00</del>
+              </div>
+            </div>
+            <button class="btn-conferir">
+              <a href="produtos.html">Conferir Oferta</a>
+            </button>
+          </div>
+          <div class="produto-3">
+            <h3 class="titulo">Nome Produto</h3>
+            <img
+              src="assets/img-produtos/notebook.jpg"
+              alt="Produto 1"
+              class="img-produto"
+            />
+            <div class="container-descricao">
+              <p class="descricao">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus officiis totam nihil est expedita doloribus,
+                delectus tempora optio doloremque facere deleniti aliquam sed
+                magni aut enim id voluptate vitae dolorem!
+              </p>
+
+              <div class="container-preco">
+                <p>DE</p>
+                <p class="preco-novo">R$ 99,99</p>
+                <p>POR</p>
+                <del class="preco-antigo">R$ 150,00</del>
+              </div>
+            </div>
+            <button class="btn-conferir">
+              <a href="produtos.html">Conferir Oferta</a>
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <article class="container-footer">
+        <div class="descricao-footer">
+          <h3>E-Commerce</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit natus nostrum at neque qui.
+          </p>
+        </div>
+        <div class="links-footer">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="inicio.html" class="link-footer">Início</a></li>
+            <li><a href="produtos.html" class="link-footer">Produtos</a></li>
+            <li><a href="carrinho.html" class="link-footer">Carrinho</a></li>
+            <li><a href="cadastrar.html" class="link-footer">Cadastrar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Informações de Contato</h3>
+          <p><b>Cidade:</b> Ponta Grossa, PR</p>
+          <p><b>Telefone:</b> +55 (42) 998123456</p>
+          <p><b>E-mail:</b> contato@info.com</p>
+        </div>
+      </article>
+      <article class="copy-footer">
+        <span>Desenvolvido com <3</span>
+      </article>
+    </footer>
+
+    <script src="assets/js/menu/MenuScript.js"></script>
+    <script src="assets/js/carrossel/CarrosselScript.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
