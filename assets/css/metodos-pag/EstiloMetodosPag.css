@@ -1,19 +1,27 @@
+h2 {
+  text-align: center;
+}
+
 .container-pag {
   margin-block: 24px;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  flex-direction: column;
   gap: 16px;
   padding: 16px;
   border-radius: 5px;
   margin: 5px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .content-pag {
   width: 100%;
-  padding: 5px;
+  padding: 12px;
   border-radius: 8px;
   border: 3px solid rgba(0, 0, 0, 0.397);
+  height: auto;
 }
 
 .meio-pag {
@@ -28,10 +36,4 @@
 
 .pag-descr {
   font-size: 14px;
-}
-
-@media screen and (max-width: 924px) {
-  .container-pag {
-    flex-direction: column;
-  }
 }

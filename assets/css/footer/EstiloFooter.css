@@ -1,44 +1,16 @@
-/*
-
-<footer>
-      <article class="container-footer">
-        <div class="descricao-footer">
-          <h3>E-Commerce</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit natus nostrum at neque qui.
-          </p>
-        </div>
-        <div class="links-footer">
-          <h3>Links Úteis</h3>
-          <ul>
-            <li><a href="inicio.html" class="link-footer">Início</a></li>
-            <li><a href="produtos.html" class="link-footer">Produtos</a></li>
-            <li><a href="carrinho.html" class="link-footer">Carrinho</a></li>
-            <li><a href="cadastrar.html" class="link-footer">Cadastrar</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Informações de Contato</h3>
-          <p><b>Cidade:</b> Ponta Grossa, PR</p>
-          <p><b>Telefone:</b> +55 (42) 998123456</p>
-          <p><b>E-mail:</b> contato@info.com</p>
-        </div>
-      </article>
-      <article>
-        <span>Desenvolvido com <3</span>
-      </article>
-    </footer>
-
-*/
+footer h3 {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
 
 .container-footer {
-  padding-block: 16px;
+  padding: 16px;
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   gap: 16px;
-  background-color: rgb(162, 167, 171);
+  background-color: #889c9b;
+  border-radius: 15px 15px 0 0;
 }
 
 .descricao-footer {
@@ -49,10 +21,31 @@
   margin-block: 5px;
 }
 
+.lista-footer {
+  list-style-type: none;
+}
+
+.lista-footer li a {
+  text-decoration: underline;
+  color: rgba(0, 0, 255, 0.807);
+}
+
 .copy-footer {
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: #486966;
   color: white;
   text-align: center;
   font-size: 18px;
   padding-block: 16px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .container-footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .descricao-footer {
+  }
 }

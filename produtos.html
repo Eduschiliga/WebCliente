@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Início</title>
+    <title>Produtos</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css" />
-    <link rel="stylesheet" href="assets/css/carrossel/EstiloCarrossel.css" />
+    <link rel="stylesheet" href="assets/css/produtos/EstiloFiltro.css" />
     <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css" />
     <link rel="stylesheet" href="assets/css/metodos-pag/EstiloMetodosPag.css" />
     <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css" />
@@ -34,90 +34,185 @@
     </header>
 
     <main>
-      <!-- CARROSSEL -->
-      <section class="container-carrossel">
-        <button id="prev-button">
-          <img src="assets/img-carrossel/arrow.png" alt="Botão voltar" />
-        </button>
-        <div class="container-images">
-          <img
-            src="assets/img-carrossel/thumb.png"
-            alt="girl"
-            class="carrossel on"
-          />
-          <img
-            src="assets/img-carrossel/thumbKurumi.png"
-            alt="girl"
-            class="carrossel"
-          />
-        </div>
-        <button id="next-button">
-          <img src="assets/img-carrossel/arrow.png" alt="Botão avançar" />
-        </button>
-      </section>
-
-      <!-- PRODUTOS DESTAQUE -->
       <section>
         <h1>Produtos Destaque</h1>
-        <div class="container-produtos">
-          <div class="card">
-            <img src="assets/img-produtos/notebook.jpg" alt="" />
-            <div class="card-content">
-              <h3>Nome do Produto</h3>
-              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
-              <span>R$ 120<sup>40</sup></span>
-              <a href="#" id="btnComprar">Comprar</a>
-            </div>
-          </div>
 
-          <div class="card">
-            <img src="assets/img-produtos/notebook.jpg" alt="" />
-            <div class="card-content">
-              <h3>Nome do Produto</h3>
-              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
-              <span>R$ 120<sup>40</sup></span>
-              <a href="#" id="btnComprar">Comprar</a>
-            </div>
-          </div>
+        <div class="container-filto">
+          <h3>Filtros</h3>
 
-          <div class="card">
-            <img src="assets/img-produtos/notebook.jpg" alt="" />
-            <div class="card-content">
-              <h3>Nome do Produto</h3>
-              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
-              <span>R$ 120<sup>40</sup></span>
-              <a href="#" id="btnComprar">Comprar</a>
-            </div>
+          <div class="container-select">
+            <label for="preco" id="lblPreco">Preço</label>
+            <select id="preco" name="preco">
+              <option value="">Selecione</option>
+              <option value="maior">Maior</option>
+              <option value="menor">Menor</option>
+            </select>
+
+            <label for="ordemAlfa" id="lblOrdemAlfa">Ordem Alfabética</label>
+            <select id="ordemAlfa" name="ordemAlfa">
+              <option value="">Selecione</option>
+              <option value="AC">A-Z</option>
+              <option value="AC">Z-A</option>
+            </select>
           </div>
         </div>
 
-        <div class="container-produtos">
-          <div class="card">
+        <div class="container-produtos" id="containerProdutos">
+          <div class="card" id="produto1">
             <img src="assets/img-produtos/notebook.jpg" alt="" />
             <div class="card-content">
-              <h3>Nome do Produto</h3>
+              <h3>Abacaxi</h3>
               <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
-              <span>R$ 120<sup>40</sup></span>
+              <span
+                >R$ <span id="precoInteiro">120</span
+                ><sup id="precoDecimal">40</sup></span
+              >
               <a href="#" id="btnComprar">Comprar</a>
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" id="produto2">
             <img src="assets/img-produtos/notebook.jpg" alt="" />
             <div class="card-content">
-              <h3>Nome do Produto</h3>
+              <h3>Corote</h3>
               <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
-              <span>R$ 120<sup>40</sup></span>
+              <span
+                >R$ <span id="precoInteiro">130</span
+                ><sup id="precoDecimal">56</sup></span
+              >
               <a href="#" id="btnComprar">Comprar</a>
             </div>
           </div>
 
-          <div class="card">
+          <div class="card" id="produto3">
             <img src="assets/img-produtos/notebook.jpg" alt="" />
             <div class="card-content">
-              <h3>Nome do Produto</h3>
+              <h3>Banana</h3>
               <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
-              <span>R$ 120<sup>40</sup></span>
+              <span
+                >R$ <span id="precoInteiro">199</span
+                ><sup id="precoDecimal">99</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img
+              src="https://img.lojadomecanico.com.br/256/69/883/190269759/repelentee-idany-43357188.JPG"
+              alt=""
+            />
+            <div class="card-content">
+              <h3>Tubaina</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">19</span
+                ><sup id="precoDecimal">50</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>Dolly</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">20</span
+                ><sup id="precoDecimal">00</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>Fini</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">8</span
+                ><sup id="precoDecimal">99</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>Laranja</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">2</span
+                ><sup id="precoDecimal">99</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>Notebook</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">2005</span
+                ><sup id="precoDecimal">99</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>Monitor</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">550</span
+                ><sup id="precoDecimal">99</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>Teclado</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">350</span
+                ><sup id="precoDecimal">99</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>Cado de rede</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">35</span
+                ><sup id="precoDecimal">99</sup></span
+              >
+              <a href="#" id="btnComprar">Comprar</a>
+            </div>
+          </div>
+
+          <div class="card" id="produto3">
+            <img src="assets/img-produtos/notebook.jpg" alt="" />
+            <div class="card-content">
+              <h3>mouse</h3>
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet....</p>
+              <span
+                >R$ <span id="precoInteiro">60</span
+                ><sup id="precoDecimal">99</sup></span
+              >
               <a href="#" id="btnComprar">Comprar</a>
             </div>
           </div>
@@ -220,7 +315,7 @@
     </footer>
 
     <script src="assets/js/menu/MenuScript.js"></script>
-    <script src="assets/js/carrossel/CarrosselScript.js"></script>
+    <script src="assets/js/produtos/ProdutosJs.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

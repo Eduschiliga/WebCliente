@@ -1,0 +1,18 @@
+.container-filto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.container-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-select label {
+  margin: 0 12px;
+}
