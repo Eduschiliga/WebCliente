@@ -9,7 +9,7 @@ footer h3 {
   justify-content: space-around;
   align-items: baseline;
   gap: 16px;
-  background-color: #889c9b;
+  background-color: #b6b6b67d;
   border-radius: 15px 15px 0 0;
 }
 
@@ -31,7 +31,7 @@ footer h3 {
 }
 
 .copy-footer {
-  background-color: #486966;
+  background-color: #000;
   color: white;
   text-align: center;
   font-size: 18px;
