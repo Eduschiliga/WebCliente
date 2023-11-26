@@ -101,6 +101,7 @@ button:hover {
   z-index: 10;
   background-color: #fff;
   width: 500px;
+  height: auto;
   max-width: 90%;
   padding: 1.2rem;
   border-radius: 0.5rem;
@@ -115,8 +116,45 @@ button:hover {
   border-bottom: 1px solid #ccc;
 }
 
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body img {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-modal {
+  width: 100%;
+}
+
 .modal-body p {
-  margin-bottom: 1rem;
+  font-size: 12px;
+  margin-block: 1rem;
+}
+
+.modal-body span,
+.precoInt,
+.precoFloat {
+  color: green;
+}
+
+.modal-body span,
+.precoFloat {
+  font-size: 24px;
+}
+
+.precoInt {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.precoFloat {
+  font-weight: bold;
 }
 
 #modal-prod1.hide,
