@@ -13,14 +13,47 @@ button {
   font-size: 1rem;
 }
 
-#fade,
-#modal {
+#fade-prod1,
+#modal-prod1,
+#fade-prod2,
+#modal-prod2,
+#fade-prod3,
+#modal-prod3,
+#fade-prod4,
+#modal-prod4,
+#fade-prod5,
+#modal-prod5,
+#fade-prod6,
+#modal-prod6,
+#fade-prod7,
+#modal-prod7,
+#fade-prod8,
+#modal-prod8,
+#fade-prod9,
+#modal-prod19,
+#fade-prod10,
+#modal-prod10,
+#fade-prod11,
+#modal-prod11,
+#fade-prod12,
+#modal-prod12 {
   transition: 0.5s;
   opacity: 1;
   pointer-events: all;
 }
 
-.open-modal {
+.open-modal-prod1,
+.open-modal-prod2,
+.open-modal-prod3,
+.open-modal-prod4,
+.open-modal-prod5,
+.open-modal-prod6,
+.open-modal-prod7,
+.open-modal-prod8,
+.open-modal-prod9,
+.open-modal-prod10,
+.open-modal-prod11,
+.open-modal-prod12 {
   cursor: pointer;
 }
 
@@ -28,7 +61,18 @@ button:hover {
   opacity: 1;
 }
 
-#fade {
+#fade-prod1,
+#fade-prod2,
+#fade-prod3,
+#fade-prod4,
+#fade-prod5,
+#fade-prod6,
+#fade-prod7,
+#fade-prod8,
+#fade-prod9,
+#fade-prod10,
+#fade-prod11,
+#fade-prod12 {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,7 +82,18 @@ button:hover {
   z-index: 5;
 }
 
-#modal {
+#modal-prod2,
+#modal-prod1,
+#modal-prod3,
+#modal-prod4,
+#modal-prod5,
+#modal-prod6,
+#modal-prod7,
+#modal-prod8,
+#modal-prod9,
+#modal-prod10,
+#modal-prod11,
+#modal-prod12 {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -64,8 +119,30 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-#modal.hide,
-#fade.hide {
+#modal-prod1.hide,
+#fade-prod1.hide,
+#modal-prod2.hide,
+#fade-prod2.hide,
+#modal-prod3.hide,
+#fade-prod3.hide,
+#modal-prod4.hide,
+#fade-prod4.hide,
+#modal-prod5.hide,
+#fade-prod5.hide,
+#modal-prod6.hide,
+#fade-prod6.hide,
+#modal-prod7.hide,
+#fade-prod7.hide,
+#modal-prod8.hide,
+#fade-prod8.hide,
+#modal-prod9.hide,
+#fade-prod9.hide,
+#modal-prod10.hide,
+#fade-prod10.hide,
+#modal-prod11.hide,
+#fade-prod11.hide,
+#modal-prod12.hide,
+#fade-prod12.hide {
   opacity: 0;
   pointer-events: none;
 }
