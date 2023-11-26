@@ -6,10 +6,9 @@
     <title>Carrinho de Compras</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css" />
-    <link rel="stylesheet" href="assets/css/carrossel/EstiloCarrossel.css" />
     <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css" />
-    <link rel="stylesheet" href="assets/css/metodos-pag/EstiloMetodosPag.css" />
     <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css" />
+    <link rel="stylesheet" href="assets/css/carrinho/EstiloCarrinho.css" />
     <link
       rel="shortcut icon"
       href="assets/favicon/favicon.ico"
@@ -39,66 +38,57 @@
     </header>
 
     <main>
-      <!-- MÉTODOS DE PAGAMENTO -->
-      <section>
-        <h2>Meios de Pagamento</h2>
+      <section class="container-carrinho">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome do Produto</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Função</th>
+            </tr>
+          </thead>
 
-        <div class="container-pag">
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Cartões de Crédito</h3>
+          <tbody>
+            <tr class="produto">
+              <td class="nome-produto">
+                <span id="#nomeProd">Nome</span>
+
+                <img
+                  src="assets/img-produtos/mouse.jpg"
+                  alt=""
+                  width="100px"
+                  height="100px"
+                  id="imgProd"
+                />
+              </td>
+
+              <td class="preco-produto">
+                <span id="precoProd">R$ 100,00</span>
+              </td>
+
+              <td class="quantidade-produto">
+                <input type="number" id="quantidadeProd" />
+              </td>
+
+              <td class="remover-produto">
+                <button id="removerProd">Remover</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="container-info">
+          <div class="container-valor">
+            <div>
+              <span>Aplicar cupom de desconto</span>
+              <span id="msgCupom"></span>
+              <input type="text" name="cupomDesc" id="cupomDesc" />
             </div>
 
-            <span class="pag-descr">Em produtos selecionados</span>
-            <span class="pag-descr">Aprovação imediata.</span>
+            <h3>Valor total: <span id="valorTotal"></span></h3>
           </div>
-
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/debit-card.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Cartões de Débito</h3>
-            </div>
-
-            <span class="pag-descr">Aprovação imediata.</span>
-          </div>
-
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/qr.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Pix</h3>
-            </div>
-
-            <span class="pag-descr"
-              >Você pode pagar a qualquer momento com seu código, sem custo
-              adicional e o seu crédito é na hora.</span
-            >
-          </div>
-
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/ticket.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Boleto Bancário</h3>
-            </div>
-
-            <span class="pag-descr"
-              >Ao comprar explicaremos como fazer o pagamento em qualquer
-              agência bancária, caixa eletrônico, Internet Banking ou
-              correspondentes bancários.</span
-            >
-          </div>
+          <button type="button" id="finalizarCompra">Finalizar Compra</button>
         </div>
       </section>
     </main>
@@ -135,7 +125,6 @@
     </footer>
 
     <script src="assets/js/menu/MenuScript.js"></script>
-    <script src="assets/js/carrossel/CarrosselScript.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
