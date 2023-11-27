@@ -119,11 +119,17 @@ window.onload = function () {
 
 const btnFinalizar = document.querySelector("#finalizarCompra");
 const user = JSON.parse(localStorage.getItem("cadastro"));
+const msgCompraFinalizada = document.querySelector("#msg-compra-finalizada");
 
 btnFinalizar.addEventListener("click", () => {
   if (user) {
-    alert("Pedido Finalizado");
+    msgCompraFinalizada.style.display = "block";
+    msgCompraFinalizada.textContent = "Pedido Finalizado com Sucesso!";
   } else {
-    alert("Por favor, faça um cadastro para realizar uma compra.");
+    msgCompraFinalizada.style.display = "block";
+    msgCompraFinalizada.textContent =
+      "Por favor, realize um cadastro para finalizar a uma compra.";
+
+    msgCompraFinalizada.style.borderBottom = "3px solid red";
   }
 });

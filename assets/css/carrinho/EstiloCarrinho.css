@@ -146,3 +146,14 @@ tr {
   font-weight: bold;
   font-size: 16px;
 }
+
+#msg-compra-finalizada {
+  display: none;
+  background-color: yellow;
+  padding: 5px 7px;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: 0.5s;
+  border-bottom: 3px solid green;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+}
