@@ -49,41 +49,16 @@
             </tr>
           </thead>
 
-          <tbody>
-            <tr class="produto">
-              <td class="nome-produto">
-                <span id="#nomeProd">Nome</span>
-
-                <img
-                  src="assets/img-produtos/mouse.jpg"
-                  alt=""
-                  width="100px"
-                  height="100px"
-                  id="imgProd"
-                />
-              </td>
-
-              <td class="preco-produto">
-                <span id="precoProd">R$ 100,00</span>
-              </td>
-
-              <td class="quantidade-produto">
-                <input type="number" id="quantidadeProd" />
-              </td>
-
-              <td class="remover-produto">
-                <button id="removerProd">Remover</button>
-              </td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
 
         <div class="container-info">
           <div class="container-valor">
             <div>
               <span>Aplicar cupom de desconto</span>
-              <span id="msgCupom"></span>
+
               <input type="text" name="cupomDesc" id="cupomDesc" />
+              <p id="msgCupom"></p>
             </div>
 
             <h3>Valor total: <span id="valorTotal"></span></h3>
@@ -126,5 +101,6 @@
 
     <script src="assets/js/menu/MenuScript.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/carrinho/CarrinhoScript.js" defer></script>
   </body>
 </html>

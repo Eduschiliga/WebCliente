@@ -56,14 +56,14 @@ tr {
   align-items: center;
 }
 
-#quantidadeProd {
+.quantidadeProd {
   width: 100px;
   border-radius: 5px;
   padding: 4px 5px;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
 }
 
-#removerProd {
+.removerProd {
   background-color: red;
   padding: 8px 12px;
   border: none;
@@ -119,8 +119,18 @@ tr {
   border-radius: 5px;
 }
 
-#imgProd {
+.imgProd {
   border-radius: 5px;
   width: 100px;
   height: 100px;
+}
+
+#msgCupom {
+  display: none;
+  background-color: black;
+  margin-top: 10px;
+  text-align: center;
+  color: yellow;
+  border-radius: 5px;
+  padding: 5px 8px;
 }
