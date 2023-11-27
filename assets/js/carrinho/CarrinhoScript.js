@@ -42,6 +42,18 @@ window.onload = function () {
       tdQuantidade.appendChild(inputQuantidade);
       tr.appendChild(tdQuantidade);
 
+      inputQuantidade.addEventListener("input", function (e) {
+        pedidos.quantidade[i] = e.target.value;
+
+        var valorTotal = 0;
+        for (let i = 0; i < pedidos.preco.length; i++) {
+          valorTotal += pedidos.preco[i] * pedidos.quantidade[i];
+        }
+
+        document.getElementById("valorTotal").textContent =
+          valorTotal.toFixed(2);
+      });
+
       let tdRemover = document.createElement("td");
       tdRemover.className = "remover-produto";
       let buttonRemover = document.createElement("button");
@@ -58,37 +70,60 @@ window.onload = function () {
         localStorage.setItem("pedidos", JSON.stringify(pedidos));
 
         tr.remove();
+
+        var valorTotal = 0;
+        for (let i = 0; i < pedidos.preco.length; i++) {
+          valorTotal += pedidos.preco[i] * pedidos.quantidade[i];
+        }
+
+        document.getElementById("valorTotal").textContent =
+          valorTotal.toFixed(2);
       });
 
       tbody.appendChild(tr);
 
-      let valorTotal = 0;
+      var valorTotal = 0;
       for (let i = 0; i < pedidos.preco.length; i++) {
         valorTotal += pedidos.preco[i] * pedidos.quantidade[i];
       }
 
       document.getElementById("valorTotal").textContent = valorTotal.toFixed(2);
+      let cupom = document.getElementById("cupomDesc");
+      cupom.addEventListener("input", function (e) {
+        let cupom = e.target.value;
+        let valorComDesconto = valorTotal;
+        let msg = document.getElementById("msgCupom");
 
-      document
-        .getElementById("cupomDesc")
-        .addEventListener("input", function (e) {
-          let cupom = e.target.value;
-          let valorComDesconto = valorTotal;
-          let msg = document.getElementById("msgCupom");
+        if (cupom === "UTFPR" || cupom === "utfpr") {
+          valorComDesconto *= 0.85;
+          msg.textContent = "Desconto de 15% aplicado!";
+          msg.style.color = "yellow";
 
-          if (cupom === "UTFPR" || cupom === "utfpr") {
-            valorComDesconto *= 0.85;
-            msg.textContent = "Desconto de 15% aplicado!";
-            msg.style.display = "block";
-          } else {
-            msg.textContent = "Cupom iválido";
-            msg.style.color = "red";
-            msg.style.display = "block";
-          }
+          msg.style.display = "block";
+        } else {
+          msg.textContent = "Cupom iválido";
+          msg.style.color = "red";
+          msg.style.display = "block";
+        }
 
-          document.getElementById("valorTotal").textContent =
-            valorComDesconto.toFixed(2);
-        });
+        if (cupom === "") {
+          msg.style.display = "none";
+        }
+
+        document.getElementById("valorTotal").textContent =
+          valorComDesconto.toFixed(2);
+      });
     }
   }
 };
+
+const btnFinalizar = document.querySelector("#finalizarCompra");
+const user = JSON.parse(localStorage.getItem("cadastro"));
+
+btnFinalizar.addEventListener("click", () => {
+  if (user) {
+    alert("Pedido Finalizado");
+  } else {
+    alert("Por favor, faça um cadastro para realizar uma compra.");
+  }
+});

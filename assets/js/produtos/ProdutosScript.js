@@ -30,7 +30,8 @@ if (!pedidos) {
 }
 
 for (let i = 0; i < btnComprarCard.length; i++) {
-  btnComprarCard[i].addEventListener("click", () => {
+  btnComprarCard[i].addEventListener("click", (event) => {
+    event.preventDefault();
     pedidos.item[i] = nomes[i].textContent;
     pedidos.quantidade[i]++;
     pedidos.preco[i] = precos[i];
@@ -38,7 +39,9 @@ for (let i = 0; i < btnComprarCard.length; i++) {
     localStorage.setItem("pedidos", JSON.stringify(pedidos));
   });
 
-  btnComprarModal[i].addEventListener("click", () => {
+  btnComprarModal[i].addEventListener("click", (event) => {
+    event.preventDefault();
+
     pedidos.item[i] = nomes[i].textContent;
     pedidos.quantidade[i]++;
     pedidos.preco[i] = precos[i];

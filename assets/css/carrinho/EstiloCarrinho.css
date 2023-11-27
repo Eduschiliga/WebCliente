@@ -1,30 +1,41 @@
 main {
-  margin-block: 32px;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  margin: 32px auto;
 }
 
 .container-carrinho {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow: auto;
+  overflow: auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+
+  width: fit-content;
+  background-color: #39393938;
 }
 
 table {
   border-collapse: collapse;
   margin: 0 auto;
-  max-width: 500px;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+  width: fit-content;
   padding: 10px;
-  border-radius: 15px;
+  max-width: none;
 }
 
 table th,
 table td {
   padding: 8px;
   border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+  background-color: rgb(216, 215, 215);
 }
 
 table th {
@@ -130,7 +141,8 @@ tr {
   background-color: black;
   margin-top: 10px;
   text-align: center;
-  color: yellow;
   border-radius: 5px;
   padding: 5px 8px;
+  font-weight: bold;
+  font-size: 16px;
 }
