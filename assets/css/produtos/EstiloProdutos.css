@@ -24,6 +24,11 @@ section h1 {
   box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.042);
   border: 3px solid rgba(128, 128, 128, 0.36);
   width: 300px;
+  transition: 1s ease-out;
+}
+
+.card:hover {
+  border: 3px solid #03a64a;
 }
 
 .card img {
@@ -60,4 +65,10 @@ section h1 {
   text-align: center;
   color: #fff;
   margin-top: 5px;
+  transition: 0.2s ease-out;
+}
+
+#btnComprar:hover {
+  background-color: #03a64ab0;
+  border: 3px solid #02594025;
 }

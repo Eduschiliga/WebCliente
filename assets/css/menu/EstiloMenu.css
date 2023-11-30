@@ -3,6 +3,7 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: #fff;
+  transition: 1s ease-out;
 }
 
 .header {
@@ -38,6 +39,10 @@ a {
 
 .nav-list a {
   padding-block: 16px;
+}
+
+.nav-list a:hover {
+  color: yellow;
 }
 
 .nav-list a,
