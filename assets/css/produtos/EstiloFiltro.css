@@ -17,6 +17,18 @@
   margin: 0 12px;
 }
 
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+select option {
+  padding: 8px;
+}
+
 @media (max-width: 750px) {
   .container-select {
     flex-direction: column;

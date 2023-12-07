@@ -1,3 +1,9 @@
+footer {
+  background-color: #fff;
+
+  border-radius: 15px 15px 0 0;
+}
+
 footer h3 {
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -9,11 +15,13 @@ footer h3 {
   justify-content: space-around;
   align-items: baseline;
   gap: 16px;
-  background-color: rgb(35, 35, 41);
+  background-color: #fff;
+  /*background-color: rgb(35, 35, 41);*/
   border-radius: 15px 15px 0 0;
 }
 
 .descricao-footer {
+  text-align: center;
   width: 200px;
 }
 
@@ -22,25 +30,28 @@ footer h3 {
 }
 
 .container-footer p {
-  color: white;
+  color: rgba(0, 0, 0, 0.808);
+  font-size: 13px;
+}
+
+.redesSociais {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-block: 12px;
+  gap: 5px;
 }
 
 .lista-footer {
   list-style-type: none;
+  text-align: center;
 }
 
 .lista-footer li a {
   text-decoration: underline;
   color: rgba(0, 0, 255, 0.807);
-}
-
-.copy-footer {
-  background-color: #151313;
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  padding-block: 16px;
-  font-weight: bold;
+  font-size: 13px;
 }
 
 .links-footer a {
@@ -51,13 +62,19 @@ footer h3 {
   color: white;
 }
 
+footer h3 {
+  color: black;
+}
+
+.contato {
+  color: #000;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 700px) {
   .container-footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .descricao-footer {
   }
 }
