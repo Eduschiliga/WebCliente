@@ -40,7 +40,10 @@ body {
   transform: translateY(-0.25rem);
 }
 
-/* Show Scroll Up */
 .show-scroll {
   bottom: 3rem;
+}
+
+.active-link {
+  color: blue;
 }
