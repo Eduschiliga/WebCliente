@@ -4,6 +4,7 @@ const precoDecimalProdutos = document.querySelectorAll(".card #precoDecimal");
 const btnComprarCard = document.querySelectorAll(".card #btnComprar");
 const btnComprarModal = document.querySelectorAll(".modal-body #btnComprar");
 const imgsCard = document.querySelectorAll(".card img");
+const toastBox = document.querySelector("#toastBox");
 
 console.log(imgsCard);
 
@@ -29,6 +30,18 @@ if (!pedidos) {
   };
 }
 
+const showToast = (name) => {
+  let toast = document.createElement("div");
+  toast.classList.add("toast");
+
+  toast.innerHTML = `<img src="assets/icon-redes/checkbox-circle-fill.png" alt="">${name} adicionado ao carrinho!`;
+  toastBox.appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+};
+
 for (let i = 0; i < btnComprarCard.length; i++) {
   btnComprarCard[i].addEventListener("click", (event) => {
     event.preventDefault();
@@ -37,6 +50,8 @@ for (let i = 0; i < btnComprarCard.length; i++) {
     pedidos.preco[i] = precos[i];
     pedidos.imagemSrc[i] = imgsCard[i].getAttribute("src");
     localStorage.setItem("pedidos", JSON.stringify(pedidos));
+
+    showToast(nomes[i].textContent);
   });
 
   btnComprarModal[i].addEventListener("click", (event) => {
@@ -47,5 +62,7 @@ for (let i = 0; i < btnComprarCard.length; i++) {
     pedidos.preco[i] = precos[i];
     pedidos.imagemSrc[i] = imgsCard[i].getAttribute("src");
     localStorage.setItem("pedidos", JSON.stringify(pedidos));
+
+    showToast(nomes[i].textContent);
   });
 }

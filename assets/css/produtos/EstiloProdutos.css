@@ -58,6 +58,43 @@ section h1 {
   font-size: 18px;
   text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.042);
 }
+#toastBox {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50000;
+  margin: 20px;
+}
+.toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: fit-content;
+  height: 80px;
+  padding: 12px;
+  background-color: #fff;
+  font-weight: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.103);
+  position: relative;
+}
+
+.toast::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #03a64a;
+  animation: anim 5s linear forwards;
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
 
 #btnComprar {
   background-color: #03a64a;
