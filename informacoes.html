@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrinho de Compras</title>
+    <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/informacoes/EstiloInformacoes.css"
+    />
     <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css" />
-    <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css" />
     <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css" />
-    <link rel="stylesheet" href="assets/css/carrinho/EstiloCarrinho.css" />
     <link
       rel="shortcut icon"
       href="assets/favicon/favicon.ico"
       type="image/x-icon"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
     />
   </head>
   <body>
@@ -37,36 +35,38 @@
       </nav>
     </header>
 
-    <main>
-      <section class="container-carrinho">
-        <table>
-          <thead>
-            <tr>
-              <th>Nome do Produto</th>
-              <th>Preço</th>
-              <th>Quantidade</th>
-              <th>Função</th>
-            </tr>
-          </thead>
+    <main class="container-wrraper-main">
+      <section class="container-info-usu">
+        <h3 class="title-info">Nome</h3>
+        <span id="nomeInfo"></span>
 
-          <tbody></tbody>
-        </table>
+        <h3 class="title-info">Data de Nascimento</h3>
+        <span id="dataNascInfo"></span>
+
+        <h3 class="title-info">E-mail</h3>
+        <span id="emailInfo"></span>
+
+        <h3 class="title-info">CPF</h3>
+        <span id="cpfInfo"></span>
+
+        <h3 class="title-info">CEP</h3>
+        <span id="cepInfo"></span>
+
+        <h3 class="title-info">Rua</h3>
+        <span id="ruaInfo"></span>
+
+        <h3 class="title-info">Bairro</h3>
+        <span id="bairroInfo"></span>
+
+        <h3 class="title-info">Cidade</h3>
+        <span id="cidadeInfo"></span>
+
+        <h3 class="title-info">Número</h3>
+        <span id="numeroInfo"></span>
+
+        <h3 class="title-info">UF</h3>
+        <span id="ufInfo"></span>
       </section>
-
-      <div class="container-info">
-        <div class="container-valor">
-          <div>
-            <span>Aplicar cupom de desconto</span>
-
-            <input type="text" name="cupomDesc" id="cupomDesc" />
-            <p id="msgCupom"></p>
-          </div>
-
-          <h3>Valor total: <span id="valorTotal"></span></h3>
-        </div>
-        <button type="button" id="finalizarCompra">Finalizar Compra</button>
-        <span id="msg-compra-finalizada"></span>
-      </div>
     </main>
 
     <footer>
@@ -126,9 +126,8 @@
     <a href="#" class="scrollup" id="scroll-up">
       <img src="assets/icon-redes/arrow-up-line.png" alt="" />
     </a>
-
-    <script src="assets/js/menu/MenuScript.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/carrinho/CarrinhoScript.js" defer></script>
+    <script src="assets/js/informacoes/InformacaoScript.js"></script>
+    <script src="assets/js/menu/MenuScript.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@ footer {
 footer h3 {
   color: rgb(255, 255, 255);
   font-weight: bold;
+  font-family: "Silkscreen", sans-serif;
 }
 
 .container-footer {
@@ -32,6 +33,7 @@ footer h3 {
 .container-footer p {
   color: rgba(0, 0, 0, 0.808);
   font-size: 13px;
+  text-align: center;
 }
 
 .redesSociais {
