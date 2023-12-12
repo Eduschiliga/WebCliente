@@ -19,7 +19,6 @@ main {
   overflow: auto;
   overflow: auto;
   box-shadow: var(--shadow);
-
   width: fit-content;
   background-color: #39393938;
 }

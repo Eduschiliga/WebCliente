@@ -72,6 +72,22 @@ footer h3 {
   text-decoration: underline;
 }
 
+.copy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: var(--gap-medium);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-shadow: var(--shadow);
+}
+
+.copy {
+  color: var(--color-white);
+  font-weight: bold;
+  text-shadow: var(--shadow);
+}
+
 @media screen and (max-width: 700px) {
   .container-footer {
     flex-direction: column;
