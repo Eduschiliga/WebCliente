@@ -2,82 +2,82 @@ a {
   font-family: sans-serif;
   text-decoration: none;
   font-weight: bold;
-  color: #000;
+  color: var(--text-color);
   transition: 0.2s ease-out;
 }
 
 .header {
-  background: #fff;
+  background: var(--color-white);
   padding-inline: 16px;
   z-index: 1000;
-  box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.041);
+  box-shadow: var(--shadow-color);
 }
 
 .nav {
-  max-width: 100%;
+  max-width: var(--porcento-100);
   height: 70px;
   margin-inline: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10020;
-  background: #fff;
+  background: var(--color-white);
 }
 
 .cadastrar {
-  background-color: blue;
+  background-color: var(--btn-color-cad);
   transition: 0.2s ease-out;
   padding: 18px;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 
 .cadastrar:hover {
-  background-color: rgba(0, 0, 255, 0.664);
+  background-color: var(--btn-color-cad-hover);
 }
 
 .nav-list {
   display: flex;
-  gap: 32px;
+  gap: var(--gap-large);
   list-style: none;
   align-items: center;
 }
 
 .nav-list li:nth-child(4) a {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .nav-list a {
-  padding-block: 16px;
+  padding-block: var(--gap-medium);
 }
 
 .nav-list a:hover {
-  color: #03a64a;
+  color: var(--secondary-color);
 }
 
 .nav-list a,
 .nav-list li {
-  font-size: 16px;
-  color: #000;
+  font-size: var(--font-size-medium);
+  color: var(--text-color);
 }
 
 .nome-usuario {
-  color: #000;
-  font-size: 20px;
+  color: var(--text-color);
+  font-size: var(--font-size-large);
   font-weight: bold;
   padding-block: 5px;
   padding-inline: 10px;
   border-radius: 5px;
-  margin-right: 32px;
+  margin-right: var(--gap-large);
   display: none;
-  border: 1px dashed black;
-  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.096);
+  border: 1px dashed var(--secondary-color);
+  box-shadow: var(--shadow-color);
 }
 
 .hamburger {
   display: none;
   border: none;
   background: none;
-  border-top: 3px solid black;
+  border-top: var(--border-width) solid var(--text-color);
   cursor: pointer;
 }
 
@@ -87,7 +87,7 @@ a {
   display: block;
   width: 30px;
   height: 3px;
-  background: black;
+  background: var(--text-color);
   margin-top: 5px;
   position: relative;
   transition: 0.3s;
@@ -109,7 +109,7 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #fff;
+    background: var(--color-white);
     clip-path: circle(100px at 90% -15%);
     transition: 1s ease-out;
     flex-direction: column;
@@ -121,12 +121,12 @@ a {
   }
 
   .nav-list a {
-    font-size: 24px;
+    font-size: var(--font-size-large);
     opacity: 0;
   }
 
   .nav-list a:hover {
-    color: #0540f2;
+    color: var(--item-menu-color);
   }
 
   .nav-list li:nth-child(1) a {

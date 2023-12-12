@@ -5,14 +5,14 @@ section {
 section h1 {
   text-align: center;
   font-family: "Silkscreen", sans-serif;
-  font-size: 32px;
+  font-size: var(--font-size-extra-large);
 }
 .container-produtos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--gap-medium);
   margin-block: 15px;
   max-width: 960px;
   margin: 30px auto;
@@ -20,24 +20,24 @@ section h1 {
 
 .card {
   width: 300px;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4px;
-  background-color: #fff;
-  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.042);
-  border: 3px solid rgba(128, 128, 128, 0.36);
+  padding: var(--gap-smal);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+  border: 3px solid var(--border-color);
   width: 300px;
   transition: 0.5s ease-out;
 }
 
 .card:hover {
-  border: 3px solid #04bf8a;
+  border: 3px solid var(--primary-hover-color);
 }
 
 .card img {
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   margin-bottom: 5px;
 }
 
@@ -45,7 +45,7 @@ section h1 {
   display: flex;
   flex-direction: column;
 
-  padding: 12px;
+  padding: var(--gap-small);
 }
 
 .card p {
@@ -54,10 +54,10 @@ section h1 {
 }
 
 .card span {
-  color: green;
+  color: var(--second-color);
   font-weight: bold;
-  font-size: 18px;
-  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.042);
+  font-size: var(--font-size-large);
+  text-shadow: var(--shadow);
 }
 #toastBox {
   position: fixed;
@@ -70,13 +70,13 @@ section h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   width: fit-content;
   height: 80px;
-  padding: 12px;
-  background-color: #fff;
+  padding: var(--gap-small);
+  background-color: var(--color-white);
   font-weight: 500px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.103);
+  box-shadow: var(--shadow);
   position: relative;
 }
 
@@ -85,9 +85,9 @@ section h1 {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: var(--porcento-100);
   height: 5px;
-  background-color: #03a64a;
+  background-color: var(--secondary-color);
   animation: anim 5s linear forwards;
 }
 
@@ -98,8 +98,8 @@ section h1 {
 }
 
 #btnComprar {
-  background-color: #03a64a;
-  border: 3px solid #02594052;
+  background-color: var(--primary-color);
+  border: var(--border-width) solid var(--secondary-color);
   border-radius: 5px;
   font-weight: bold;
   font-size: 18px;
@@ -111,6 +111,6 @@ section h1 {
 }
 
 #btnComprar:hover {
-  background-color: #03a64ab0;
-  border: 3px solid #02594025;
+  background-color: var(--primary-hover-color);
+  border: 3px solid var(--secondary-hover-color);
 }

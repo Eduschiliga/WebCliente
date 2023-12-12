@@ -8,10 +8,10 @@
 .container-form form {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--gap-small);
   width: 500px;
-  padding: 16px;
-  background: #fff;
+  padding: var(--gap-medium);
+  background: var(--color-white);
   border-radius: 10px;
 }
 
@@ -30,18 +30,21 @@ input {
 }
 
 input[type="button"] {
-  background-color: blue;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  font-weight: bold;
   padding: 5px;
   border-radius: 5px;
   font-size: 16px;
+  cursor: pointer;
+  border: var(--border-width) solid var(--secondary-color);
 }
 
 #msgError,
 #msgSuccess {
   text-align: center;
-  padding: 10px;
-  border-radius: 4px;
+  padding: var(--gap-small);
+  border-radius: var(--border-radius);
   display: none;
 }
 

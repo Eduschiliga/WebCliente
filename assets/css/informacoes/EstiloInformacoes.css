@@ -5,27 +5,27 @@
   margin-block: 15px;
   max-width: 500px;
   margin: 30px auto;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 32px;
-  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.042);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: var(--gap-large);
+  box-shadow: var(--shadow);
 }
 
 .container-info-usu {
-  width: 100%;
+  width: var(--porcento-100);
 }
 
 .title-info {
-  color: #03a64a;
-  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.042);
+  color: var(--secondary-color);
+  text-shadow: var(--shadow);
   font-family: "Silkscreen", sans-serif;
-  font-size: 22px;
+  font-size: var(--font-size-large);
 }
 
 span {
   margin-bottom: 12px;
   border-bottom: 2px solid gray;
-  width: 100%;
+  width: var(--porcento-100);
   display: block;
-  font-size: 14px;
+  font-size: var(--font-size-small);
 }

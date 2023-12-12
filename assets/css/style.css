@@ -6,6 +6,39 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  /* CORES */
+  --primary-color: #04bf8a;
+  --primary-hover-color: #04bf8a8c;
+  --secondary-color: #03a64a;
+  --secondary-hover-color: #03a64a1c;
+  --btn-color-cad: #026873;
+  --btn-color-cad-hover: #024059;
+  --item-menu-color: #03a64a;
+  --shadow-color: rgba(0, 0, 0, 0.096);
+  --background-color: #dedede56;
+  --text-color: #000;
+  --color-white: #fff;
+  --border-color: rgba(128, 128, 128, 0.36);
+
+  /* MEDIDAS */
+  --porcento-100: 100%;
+
+  --gap-small: 8px;
+  --gap-medium: 16px;
+  --gap-large: 32px;
+
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+  --font-size-extra-large: 32px;
+
+  /* SOMBRA E BORDA */
+  --shadow: 5px 5px 9px var(--shadow-color);
+  --border-radius: 5px;
+  --border-width: 3px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,22 +48,22 @@ body {
 }
 
 .title {
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.074);
+  text-shadow: var(--shadow);
   text-align: center;
   margin: 0px;
 }
 
 .scrollup {
   position: fixed;
-  right: 1rem;
+  right: var(--gap-medium);
   bottom: -50%;
-  background-color: rgb(72, 231, 86);
-  padding: 6px;
+  background-color: var(--primary-color);
+  padding: var(--gap-small);
   display: inline-flex;
   border-radius: 50%;
   color: var(--first-color);
-  font-size: 1.25rem;
-  box-shadow: 0 4px 12px hsla(228, 15%, 8%, 0.4);
+  font-size: var(--font-size-medium);
+  box-shadow: var(--shadow);
   z-index: var(--z-tooltip);
   transition: bottom 0.4s, transform 0.4s;
 }
@@ -41,8 +74,4 @@ body {
 
 .show-scroll {
   bottom: 3rem;
-}
-
-.active-link {
-  color: blue;
 }

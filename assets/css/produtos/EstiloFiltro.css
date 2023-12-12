@@ -19,15 +19,15 @@
 }
 
 select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+  padding: var(--gap-small);
+  border: var(--border-width) solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-small);
   width: 200px;
 }
 
 select option {
-  padding: 8px;
+  padding: var(--gap-small);
 }
 
 @media (max-width: 750px) {

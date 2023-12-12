@@ -5,16 +5,16 @@ main {
   align-items: center;
   flex-direction: column;
   width: fit-content;
-  margin: 32px auto;
+  margin: var(--gap-large) auto;
 }
 
 .container-carrinho {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap-medium);
   overflow: auto;
   overflow: auto;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+  box-shadow: var(--shadow);
 
   width: fit-content;
   background-color: #39393938;
@@ -24,13 +24,13 @@ table {
   border-collapse: collapse;
   margin: 0 auto;
   width: fit-content;
-  padding: 10px;
+  padding: var(--gap-small);
   max-width: none;
 }
 
 table th,
 table td {
-  padding: 8px;
+  padding: var(--gap-small);
   border-bottom: 1px solid #ddd;
 }
 
@@ -56,7 +56,7 @@ tr {
 }
 
 .produto {
-  border-top: 3px solid gray;
+  border-top: var(--border-width) solid gray;
 }
 
 .nome-produto {
@@ -68,20 +68,20 @@ tr {
 
 .quantidadeProd {
   width: 100px;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   padding: 4px 5px;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+  box-shadow: var(--shadow);
 }
 
 .removerProd {
   background-color: red;
-  padding: 8px 12px;
+  padding: var(--gap-small) 12px;
   border: none;
   font-weight: bold;
-  color: #fff;
-  border-radius: 5px;
+  color: var(--color-white);
+  border-radius: var(--border-radius);
   cursor: pointer;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+  box-shadow: var(--shadow);
 }
 
 #removerProd:hover {
@@ -91,7 +91,7 @@ tr {
 .container-info {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap-medium);
   justify-content: center;
   align-items: center;
 }
@@ -102,35 +102,35 @@ tr {
   align-items: center;
   flex-direction: column;
   gap: 12px;
-  margin-block: 16px;
+  margin-block: var(--gap-medium);
 }
 
 #finalizarCompra {
-  background-color: #60bf81;
-  color: #fff;
-  padding: 12px 16px;
-  width: 100%;
-  border-radius: 8px;
-  border: 3px solid #3b8c66;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  padding: var(--gap-small) var(--gap-medium);
+  width: var(--porcento-100);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--secondary-color);
   cursor: pointer;
   font-weight: bold;
-  font-size: 16px;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+  font-size: var(--font-size-medium);
+  box-shadow: var(--shadow);
 }
 
 #finalizarCompra:hover {
-  background-color: #60bf81d8;
-  border: 3px solid #3b8c66d7;
+  background-color: var(--primary-hover-color);
+  border: var(--border-width) solid var(--secondary-hover-color);
 }
 
 #cupomDesc {
-  border: 2px solid rgba(128, 128, 128, 0.786);
-  padding: 5px 12px;
-  border-radius: 5px;
+  border: var(--border-width) solid rgba(128, 128, 128, 0.786);
+  padding: var(--gap-small) 12px;
+  border-radius: var(--border-radius);
 }
 
 .imgProd {
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   width: 100px;
   height: 100px;
 }
@@ -141,21 +141,21 @@ tr {
   margin-top: 10px;
   text-align: center;
   border-radius: 5px;
-  padding: 5px 8px;
+  padding: 5px var(--gap-small);
   font-weight: bold;
-  font-size: 16px;
+  font-size: var(--font-size-medium);
 }
 
 #msg-compra-finalizada {
   display: none;
 
-  padding: 5px 7px;
+  padding: 5px var(--gap-small);
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   transition: 0.5s;
   background-color: #fff;
-  border: 3px solid green;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+  border: var(--border-width) solid var(--primary-color);
+  box-shadow: var(--shadow);
 }
 
 @media screen and (max-width: 750px) {
@@ -189,15 +189,15 @@ tr {
 
   .quantidadeProd {
     width: 70px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 4px 6px;
-    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.092);
+    box-shadow: var(--shadow);
   }
 
   .container-info {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--gap-medium);
     justify-content: center;
     align-items: center;
   }

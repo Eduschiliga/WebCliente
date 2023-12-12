@@ -1,24 +1,23 @@
 footer {
-  background-color: #fff;
+  background-color: var(--color-white);
 
-  border-radius: 15px 15px 0 0;
+  border-radius: var(--gap-medium) var(--gap-medium) 0 0;
 }
 
 footer h3 {
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
   font-weight: bold;
   font-family: "Silkscreen", sans-serif;
 }
 
 .container-footer {
-  padding: 16px;
+  padding: var(--gap-medium);
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  gap: 16px;
-  background-color: #fff;
-  /*background-color: rgb(35, 35, 41);*/
-  border-radius: 15px 15px 0 0;
+  gap: var(--gap-medium);
+  background-color: var(--color-white);
+  border-radius: var(--gap-medium) var(--gap-medium) 0 0;
 }
 
 .descricao-footer {
@@ -32,7 +31,7 @@ footer h3 {
 
 .container-footer p {
   color: rgba(0, 0, 0, 0.808);
-  font-size: 13px;
+  font-size: var(--font-size-small);
   text-align: center;
 }
 
@@ -52,24 +51,24 @@ footer h3 {
 
 .lista-footer li a {
   text-decoration: underline;
-  color: rgba(0, 0, 255, 0.807);
-  font-size: 13px;
+  color: var(--item-menu-color);
+  font-size: var(--font-size-small);
 }
 
 .links-footer a {
-  color: rgba(0, 0, 255, 0.807);
+  color: var(--item-menu-color);
 }
 
 .links-footer {
-  color: white;
+  color: var(--color-white);
 }
 
 footer h3 {
-  color: black;
+  color: var(--text-color);
 }
 
 .contato {
-  color: #000;
+  color: var(--text-color);
   text-decoration: underline;
 }
 

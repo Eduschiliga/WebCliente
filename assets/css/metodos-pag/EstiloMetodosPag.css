@@ -9,28 +9,28 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 5px;
+  gap: var(--gap-medium);
+  padding: var(--gap-medium);
+  border-radius: var(--border-radius);
   margin: 5px;
   width: fit-content;
   margin: 0 auto;
 }
 
 .content-pag {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 2px solid rgba(0, 0, 0, 0.397);
+  width: var(--porcento-100);
+  padding: var(--gap-small);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid rgba(0, 0, 0, 0.397);
   height: auto;
-  background-color: #fff;
+  background-color: var(--color-white);
   transition: 0.5s ease-out;
 }
 
 .meio-pag {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: var(--gap-small);
 }
 
 .content-pag:hover {
@@ -38,5 +38,5 @@ h2 {
 }
 
 .pag-descr {
-  font-size: 14px;
+  font-size: var(--font-size-small);
 }
