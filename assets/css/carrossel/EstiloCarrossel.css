@@ -1,3 +1,7 @@
+.nav-list li:nth-child(1) a {
+  color: var(--secondary-color);
+}
+
 .container-carrossel {
   display: flex;
   width: var(--porcento-100);

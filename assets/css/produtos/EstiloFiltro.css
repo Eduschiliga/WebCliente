@@ -1,3 +1,7 @@
+.nav-list li:nth-child(2) a {
+  color: var(--secondary-color);
+}
+
 .container-filto {
   display: flex;
   justify-content: center;

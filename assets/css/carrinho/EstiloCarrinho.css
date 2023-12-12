@@ -1,3 +1,7 @@
+.nav-list li:nth-child(3) a {
+  color: var(--secondary-color);
+}
+
 main {
   height: 100vh;
   display: flex;
