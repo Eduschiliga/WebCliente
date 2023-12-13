@@ -39,7 +39,7 @@ const showToast = (name) => {
 
   setTimeout(() => {
     toast.remove();
-  }, 3000);
+  }, 5000);
 };
 
 for (let i = 0; i < btnComprarCard.length; i++) {
