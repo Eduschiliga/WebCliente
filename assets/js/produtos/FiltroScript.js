@@ -3,56 +3,68 @@ const CONTAINER_PRODUTOS = document.querySelector("#containerProdutos");
 const SELECT_PRECO = document.querySelector("#preco");
 const SELECT_ORDEM_ALFA = document.querySelector("#ordemAlfa");
 
-function ordenarPorPreco() {
-  let produtosArray = Array.from(PRODUTOS);
-  SELECT_ORDEM_ALFA.selectedIndex = 0;
-  produtosArray.sort((a, b) => {
-    const precoA = parseFloat(a.querySelector("#precoInteiro").textContent);
-    const precoB = parseFloat(b.querySelector("#precoInteiro").textContent);
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById('searchInput');
+    const productCards = document.querySelectorAll('.card');
 
-    if (SELECT_PRECO.value === "maior") {
-      return precoB - precoA;
-    } else if (SELECT_PRECO.value === "menor") {
-      return precoA - precoB;
+    searchInput.addEventListener('input', function () {
+        const searchValue = searchInput.value.toLowerCase();
+
+        productCards.forEach(card => {
+            const productName = card.querySelector('h3').innerText.toLowerCase();
+            if (productName.includes(searchValue)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+
+    // Inicializando eventos de filtro
+    SELECT_PRECO.addEventListener("change", ordenarProdutos);
+    SELECT_ORDEM_ALFA.addEventListener("change", ordenarProdutos);
+});
+
+function ordenarProdutos() {
+    let produtosArray = Array.from(PRODUTOS);
+
+    // Aplicar ordenação alfabética primeiro
+    if (SELECT_ORDEM_ALFA.value) {
+        produtosArray.sort((a, b) => {
+            const nomeA = a.querySelector("h3").textContent.toLowerCase();
+            const nomeB = b.querySelector("h3").textContent.toLowerCase();
+
+            if (SELECT_ORDEM_ALFA.value === "AZ") {
+                return nomeA.localeCompare(nomeB);
+            } else if (SELECT_ORDEM_ALFA.value === "ZA") {
+                return nomeB.localeCompare(nomeA);
+            }
+
+            return 0;
+        });
     }
 
-    return 0; // Nenhuma ordenação específica, mantém a ordem original
-  });
+    // Aplicar ordenação por preço
+    if (SELECT_PRECO.value) {
+        produtosArray.sort((a, b) => {
+            const precoA = parseFloat(a.querySelector("#precoInteiro").textContent + "." + a.querySelector("#precoDecimal").textContent);
+            const precoB = parseFloat(b.querySelector("#precoInteiro").textContent + "." + b.querySelector("#precoDecimal").textContent);
 
-  // Limpar o contêiner
-  CONTAINER_PRODUTOS.innerHTML = "";
+            if (SELECT_PRECO.value === "maior") {
+                return precoB - precoA;
+            } else if (SELECT_PRECO.value === "menor") {
+                return precoA - precoB;
+            }
 
-  // Adicionar produtos ordenados ao contêiner
-  produtosArray.forEach((produto) => {
-    CONTAINER_PRODUTOS.appendChild(produto);
-  });
-}
-
-function ordenarPorOrdemAlfa() {
-  let produtosArray = Array.from(PRODUTOS);
-  SELECT_PRECO.selectedIndex = 0;
-
-  produtosArray.sort((a, b) => {
-    const nomeA = a.querySelector("h3").textContent.toLowerCase();
-    const nomeB = b.querySelector("h3").textContent.toLowerCase();
-
-    if (SELECT_ORDEM_ALFA.value === "AZ") {
-      return nomeA.localeCompare(nomeB);
-    } else if (SELECT_ORDEM_ALFA.value === "ZA") {
-      return nomeB.localeCompare(nomeA);
+            return 0;
+        });
     }
 
-    return 0; // Nenhuma ordenação específica, mantém a ordem original
-  });
+    // Limpar o contêiner
+    CONTAINER_PRODUTOS.innerHTML = "";
 
-  // Limpar o contêiner
-  CONTAINER_PRODUTOS.innerHTML = "";
-
-  // Adicionar produtos ordenados ao contêiner
-  produtosArray.forEach((produto) => {
-    CONTAINER_PRODUTOS.appendChild(produto);
-  });
+    // Adicionar produtos ordenados ao contêiner
+    produtosArray.forEach((produto) => {
+        CONTAINER_PRODUTOS.appendChild(produto);
+    });
 }
-
-SELECT_PRECO.addEventListener("change", ordenarPorPreco);
-SELECT_ORDEM_ALFA.addEventListener("change", ordenarPorOrdemAlfa);

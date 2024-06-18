@@ -1,170 +1,180 @@
 a {
-  font-family: sans-serif;
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--text-color);
-  transition: 0.2s ease-out;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: 0.2s ease-out;
 }
 
 .header {
-  background: var(--color-white);
-  padding-inline: 16px;
-  z-index: 1000;
-  box-shadow: var(--shadow-color);
+    background: var(--color-white);
+    padding-inline: 16px;
+    z-index: 1000000;
+    box-shadow: var(--shadow-color);
+    padding: var(--gap-small);
 }
 
 .nav {
-  max-width: var(--porcento-100);
-  height: 70px;
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10020;
-  background: var(--color-white);
+    max-width: var(--porcento-100);
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10020;
+    background: var(--color-white);
+    padding: var(--gap-small);
 }
 
 .cadastrar {
-  background-color: var(--btn-color-cad);
-  transition: 0.2s ease-out;
-  padding: 18px;
-  border-radius: var(--border-radius);
+    background-color: var(--btn-color-cad);
+    transition: 0.2s ease-out;
+    padding: 18px;
+    border-radius: var(--border-radius);
 }
 
 .cadastrar:hover {
-  background-color: var(--btn-color-cad-hover);
+    background-color: var(--btn-color-cad-hover);
 }
 
 .nav-list {
-  display: flex;
-  gap: var(--gap-large);
-  list-style: none;
-  align-items: center;
-}
+    display: flex;
+    gap: var(--gap-large);
+    list-style: none;
+    align-items: center;
+    justify-content: center;
 
+    li a{
+        display: flex;
+        gap: var(--gap-small);
+        list-style: none;
+        align-items: center!important;
+        justify-content: center;
+    }
+}
 .nav-list li:nth-child(4) a {
-  color: var(--color-white);
+    color: var(--color-white);
 }
 
 .nav-list a {
-  padding-block: var(--gap-medium);
+    padding-block: var(--gap-medium);
 }
 
 .nav-list a:hover {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .nav-list a,
 .nav-list li {
-  font-size: var(--font-size-medium);
-  color: var(--text-color);
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
 }
 
 .nome-usuario {
-  color: var(--text-color);
-  font-size: var(--font-size-large);
-  font-weight: bold;
-  padding-block: 5px;
-  padding-inline: 10px;
-  border-radius: 5px;
-  margin-right: var(--gap-large);
-  display: none;
-  border: 1px dashed var(--secondary-color);
-  box-shadow: var(--shadow-color);
+    color: var(--text-color);
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    padding-block: 5px;
+    padding-inline: 10px;
+    border-radius: 5px;
+    margin-right: var(--gap-large);
+    display: none;
+    border: 1px dashed var(--secondary-color);
+    box-shadow: var(--shadow-color);
 }
 
 .hamburger {
-  display: none;
-  border: none;
-  background: none;
-  border-top: var(--border-width) solid var(--text-color);
-  cursor: pointer;
+    display: none;
+    border: none;
+    background: none;
+    border-top: var(--border-width) solid var(--text-color);
+    cursor: pointer;
 }
 
 .hamburger::after,
 .hamburger::before {
-  content: " ";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: var(--text-color);
-  margin-top: 5px;
-  position: relative;
-  transition: 0.3s;
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--text-color);
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
 }
 
 @media (max-width: 750px) {
-  .hamburger {
-    display: block;
-    z-index: 1;
-  }
+    .hamburger {
+        display: block;
+        z-index: 1;
+    }
 
-  .nav {
-    justify-content: space-between;
-  }
+    .nav {
+        justify-content: space-between;
+    }
 
-  .nav-list {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: var(--color-white);
-    clip-path: circle(100px at 90% -15%);
-    transition: 1s ease-out;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0;
-    pointer-events: none;
-    z-index: 1500;
-  }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--color-white);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+        z-index: 1500;
+    }
 
-  .nav-list a {
-    font-size: var(--font-size-large);
-    opacity: 0;
-  }
+    .nav-list a {
+        font-size: var(--font-size-large);
+        opacity: 0;
+    }
 
-  .nav-list a:hover {
-    color: var(--item-menu-color);
-  }
+    .nav-list a:hover {
+        color: var(--item-menu-color);
+    }
 
-  .nav-list li:nth-child(1) a {
-    transition: 0.5s 0.2s;
-  }
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
 
-  .nav-list li:nth-child(2) a {
-    transition: 0.5s 0.4s;
-  }
+    .nav-list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
 
-  .nav-list li:nth-child(3) a {
-    transition: 0.5s 0.6s;
-  }
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
 
-  .nav.active .nav-list {
-    clip-path: circle(1500px at 90% -15%);
-    pointer-events: all;
-    z-index: 1500;
-  }
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        z-index: 1500;
+    }
 
-  .nav.active .nav-list a {
-    opacity: 1;
-  }
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
 
-  .nav.active .hamburger {
-    position: fixed;
-    top: 26px;
-    right: 16px;
-    border-top-color: transparent;
-    z-index: 1600;
-  }
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+        z-index: 1600;
+    }
 
-  .nav.active .hamburger::before {
-    transform: rotate(135deg);
-  }
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+    }
 
-  .nav.active .hamburger::after {
-    transform: rotate(-135deg);
-    top: -7px;
-  }
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
 }

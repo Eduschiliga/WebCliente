@@ -1,285 +1,303 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Início</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css" />
-    <link rel="stylesheet" href="assets/css/carrossel/EstiloCarrossel.css" />
-    <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css" />
-    <link rel="stylesheet" href="assets/css/metodos-pag/EstiloMetodosPag.css" />
-    <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css" />
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css"/>
+    <link rel="stylesheet" href="assets/css/carrossel/EstiloCarrossel.css"/>
+    <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css"/>
+    <link rel="stylesheet" href="assets/css/metodos-pag/EstiloMetodosPag.css"/>
+    <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+            rel="stylesheet"
     />
     <link
-      rel="shortcut icon"
-      href="assets/favicon/favicon.ico"
-      type="image/x-icon"
+            rel="shortcut icon"
+            href="assets/favicon/favicon.ico"
+            type="image/x-icon"
     />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <a href="informacoes.html" id="nomeUser" class="nome-usuario"></a>
-        <button class="hamburger"></button>
+</head>
+<body>
+<header class="header">
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+        <a href="informacoes.html" id="nomeUser" class="nome-usuario">Usuário</a>
+        <button class="hamburger" aria-label="Abrir menu">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <ul class="nav-list">
-          <li><a href="index.html" class="active-link">Início</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="carrinho.html">Carrinho</a></li>
-          <li>
-            <a href="formulario.html" class="cadastrar" id="cadastrarUser"
-              >Cadastrar</a
-            >
-          </li>
+            <li>
+                <a href="index.html" class="active-link" aria-label="Página inicial">
+                    <span class="material-symbols-outlined">home</span>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="produtos.html" aria-label="Página de produtos">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span>Produtos</span>
+                </a>
+            </li>
+            <li>
+                <a href="carrinho.html" aria-label="Página do carrinho">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span>Carrinho</span>
+                </a>
+            </li>
+            <li>
+                <a href="formulario.html" class="cadastrar" id="cadastrarUser" aria-label="Página de cadastro">
+                    <span class="material-symbols-outlined">person_add</span>
+                    <span>Cadastrar</span>
+                </a>
+            </li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <main>
-      <!-- CARROSSEL -->
-      <section class="container-carrossel">
+
+<main>
+    <!-- CARROSSEL -->
+    <section class="container-carrossel">
         <button id="prev-button">
-          <img src="assets/img-carrossel/arrow.png" alt="Botão voltar" />
+            <img src="assets/img-carrossel/arrow.png" alt="Botão voltar"/>
         </button>
         <div class="container-images">
-          <img
-            src="assets/img-carrossel/comprasonline.jpg"
-            alt="girl"
-            class="carrossel on"
-          />
-          <img
-            src="assets/img-carrossel/pessoascomprando2.jpg"
-            alt="girl"
-            class="carrossel"
-          />
+            <img
+                    src="assets/img-carrossel/comprasonline.jpg"
+                    alt="girl"
+                    class="carrossel on"
+            />
+            <img
+                    src="assets/img-carrossel/pessoascomprando2.jpg"
+                    alt="girl"
+                    class="carrossel"
+            />
         </div>
         <button id="next-button">
-          <img src="assets/img-carrossel/arrow.png" alt="Botão avançar" />
+            <img src="assets/img-carrossel/arrow.png" alt="Botão avançar"/>
         </button>
-      </section>
+    </section>
 
-      <!-- PRODUTOS DESTAQUE -->
-      <section>
+    <!-- PRODUTOS DESTAQUE -->
+    <section>
         <h1 class="title">Produtos em Destaque</h1>
         <h3 class="title">As melhores promoções!</h3>
         <div class="container-produtos">
-          <div class="card">
-            <img src="assets/img-produtos/mouse.jpg" alt="" />
-            <div class="card-content">
-              <h3>Mouse</h3>
-              <p>Um verdadeiro mouse gamer, ideal para longas horas de....</p>
-              <span
-                >R$ <span id="precoInteiro">60</span
-                ><sup id="precoDecimal">99</sup></span
-              >
-              <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+            <div class="card">
+                <img src="assets/img-produtos/mouse.jpg" alt=""/>
+                <div class="card-content">
+                    <h3>Mouse</h3>
+                    <p>Um verdadeiro mouse gamer, ideal para longas horas de....</p>
+                    <span
+                    >R$ <span id="precoInteiro">60</span
+                    ><sup id="precoDecimal">99</sup></span
+                    >
+                    <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+                </div>
             </div>
-          </div>
 
-          <div class="card">
-            <img src="assets/img-produtos/abacate.jpg" alt="" />
-            <div class="card-content">
-              <h3>Abacate</h3>
-              <p>O Abacate é uma das frutas mais completas para a saúde....</p>
-              <span
-                >R$ <span id="precoInteiro">19</span
-                ><sup id="precoDecimal">50</sup></span
-              >
-              <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+            <div class="card">
+                <img src="assets/img-produtos/abacate.jpg" alt=""/>
+                <div class="card-content">
+                    <h3>Abacate</h3>
+                    <p>O Abacate é uma das frutas mais completas para a saúde....</p>
+                    <span
+                    >R$ <span id="precoInteiro">19</span
+                    ><sup id="precoDecimal">50</sup></span
+                    >
+                    <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+                </div>
             </div>
-          </div>
 
-          <div class="card">
-            <img src="assets/img-produtos/corote.jpg" alt="" />
-            <div class="card-content">
-              <h3>Corote</h3>
-              <p>Coquetel Sabor Tutti-Frutti Corote 500ml: Vodka....</p>
-              <span
-                >R$ <span id="precoInteiro">130</span
-                ><sup id="precoDecimal">56</sup></span
-              >
-              <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+            <div class="card">
+                <img src="assets/img-produtos/PC-Gamer.jpg" alt=""/>
+                <div class="card-content">
+                    <h3>Pc Gamer</h3>
+                    <p>PC Gamer de Alta Performance...</p>
+                    <span
+                    >R$ <span id="precoInteiro">3500</span
+                    ><sup id="precoDecimal">00</sup></span
+                    >
+                    <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+                </div>
             </div>
-          </div>
         </div>
 
         <div class="container-produtos">
-          <div class="card">
-            <img src="assets/img-produtos/dolly.jpg" alt="" />
-            <div class="card-content">
-              <h3>Dolly</h3>
-              <p>LDolly é presença na mesa dos brasileiros desde 1987, é....</p>
-              <span
-                >R$ <span id="precoInteiro">20</span
-                ><sup id="precoDecimal">00</sup></span
-              >
-              <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+            <div class="card">
+                <img src="assets/img-produtos/dolly.jpg" alt=""/>
+                <div class="card-content">
+                    <h3>Dolly</h3>
+                    <p>LDolly é presença na mesa dos brasileiros desde 1987, é....</p>
+                    <span
+                    >R$ <span id="precoInteiro">20</span
+                    ><sup id="precoDecimal">00</sup></span
+                    >
+                    <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+                </div>
             </div>
-          </div>
 
-          <div class="card">
-            <img src="assets/img-produtos/monitor.jpg" alt="" />
-            <div class="card-content">
-              <h3>Monitor</h3>
-              <p>Com uma tela de 34" QHD, o MONITOR GAMER XZ2 XZ342CU....</p>
-              <span
-                >R$ <span id="precoInteiro">550</span
-                ><sup id="precoDecimal">99</sup></span
-              >
-              <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+            <div class="card">
+                <img src="assets/img-produtos/monitor.jpg" alt=""/>
+                <div class="card-content">
+                    <h3>Monitor</h3>
+                    <p>Com uma tela de 34" QHD, o MONITOR GAMER XZ2 XZ342CU....</p>
+                    <span
+                    >R$ <span id="precoInteiro">550</span
+                    ><sup id="precoDecimal">99</sup></span
+                    >
+                    <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+                </div>
             </div>
-          </div>
 
-          <div class="card">
-            <img src="assets/img-produtos/fini.jpg" alt="" />
-            <div class="card-content">
-              <h3>Fini</h3>
-              <p>
-                A Bala de Gelatina Beijos Morango Fini é feita com gelatina....
-              </p>
-              <span
-                >R$ <span id="precoInteiro">8</span
-                ><sup id="precoDecimal">99</sup></span
-              >
-              <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+            <div class="card">
+                <img src="assets/img-produtos/fini.jpg" alt=""/>
+                <div class="card-content">
+                    <h3>Fini</h3>
+                    <p>
+                        A Bala de Gelatina Beijos Morango Fini é feita com gelatina....
+                    </p>
+                    <span
+                    >R$ <span id="precoInteiro">8</span
+                    ><sup id="precoDecimal">99</sup></span
+                    >
+                    <a href="produtos.html" id="btnComprar">Conferir Oferta</a>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- MÉTODOS DE PAGAMENTO -->
-      <section>
+    <!-- MÉTODOS DE PAGAMENTO -->
+    <section>
         <h2 class="title">Meios de Pagamento</h2>
 
         <div class="container-pag">
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Cartões de Crédito</h3>
+            <div class="content-pag">
+                <div class="meio-pag">
+                    <img
+                            src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg"
+                            alt="Cratão de Crédito"
+                    />
+                    <h3>Cartões de Crédito</h3>
+                </div>
+
+                <span class="pag-descr">Em produtos selecionados</span>
+                <span class="pag-descr">Aprovação imediata.</span>
             </div>
 
-            <span class="pag-descr">Em produtos selecionados</span>
-            <span class="pag-descr">Aprovação imediata.</span>
-          </div>
+            <div class="content-pag">
+                <div class="meio-pag">
+                    <img
+                            src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/debit-card.svg"
+                            alt="Cratão de Crédito"
+                    />
+                    <h3>Cartões de Débito</h3>
+                </div>
 
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/debit-card.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Cartões de Débito</h3>
+                <span class="pag-descr">Aprovação imediata.</span>
             </div>
 
-            <span class="pag-descr">Aprovação imediata.</span>
-          </div>
+            <div class="content-pag">
+                <div class="meio-pag">
+                    <img
+                            src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/qr.svg"
+                            alt="Cratão de Crédito"
+                    />
+                    <h3>Pix</h3>
+                </div>
 
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/qr.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Pix</h3>
-            </div>
-
-            <span class="pag-descr"
-              >Você pode pagar a qualquer momento com seu código, sem custo
+                <span class="pag-descr"
+                >Você pode pagar a qualquer momento com seu código, sem custo
               adicional e o seu crédito é na hora.</span
-            >
-          </div>
-
-          <div class="content-pag">
-            <div class="meio-pag">
-              <img
-                src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/ticket.svg"
-                alt="Cratão de Crédito"
-              />
-              <h3>Boleto Bancário</h3>
+                >
             </div>
 
-            <span class="pag-descr"
-              >Ao comprar explicaremos como fazer o pagamento em qualquer
+            <div class="content-pag">
+                <div class="meio-pag">
+                    <img
+                            src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/ticket.svg"
+                            alt="Cratão de Crédito"
+                    />
+                    <h3>Boleto Bancário</h3>
+                </div>
+
+                <span class="pag-descr"
+                >Ao comprar explicaremos como fazer o pagamento em qualquer
               agência bancária, caixa eletrônico, Internet Banking ou
               correspondentes bancários.</span
-            >
-          </div>
+                >
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
+</main>
 
-    <footer>
-      <section class="container-footer">
+<footer>
+    <section class="container-footer">
         <article class="links-footer">
-          <h3>Acesso Rápido</h3>
-          <ul class="lista-footer">
-            <li><a href="index.html" class="link-footer">Início</a></li>
-            <li><a href="produtos.html" class="link-footer">Produtos</a></li>
-            <li><a href="carrinho.html" class="link-footer">Carrinho</a></li>
-          </ul>
+            <h3>Acesso Rápido</h3>
+            <ul class="lista-footer">
+                <li><a href="index.html" class="link-footer" aria-label="Ir para a página inicial">Início</a></li>
+                <li><a href="produtos.html" class="link-footer" aria-label="Ir para a página de produtos">Produtos</a>
+                </li>
+                <li><a href="carrinho.html" class="link-footer" aria-label="Ir para a página do carrinho">Carrinho</a>
+                </li>
+                <li><a href="termosEcondicoes.html" class="link-footer" aria-label="Termos e Condições">Termos e
+                    Condições</a></li>
+            </ul>
         </article>
 
         <article class="descricao-footer">
-          <h3>UTFPR</h3>
-          <p>
-            Junte-se a nós e descubra um mundo de possibilidades de compras com
-            facilidade e confiança.
-          </p>
+            <h3>UTFPR</h3>
+            <p>Junte-se a nós e descubra um mundo de possibilidades de compras com facilidade e confiança.</p>
         </article>
 
         <article>
-          <h3>Informações de Contato</h3>
-          <p><b class="contato">Cidade:</b> Ponta Grossa, PR</p>
-          <p><b class="contato">Telefone:</b> +55 (42) 998123456</p>
-          <p><b class="contato">E-mail:</b> contato@info.com</p>
-          <ul class="redesSociais">
-            <li>
-              <a href="#">
-                <img
-                  src="assets/icon-redes/facebook-box-fill.png"
-                  alt="Facebook"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="assets/icon-redes/instagram-fill.png"
-                  alt="Instagram"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="assets/icon-redes/linkedin-box-fill.png"
-                  alt="Linkedin"
-                />
-              </a>
-            </li>
-          </ul>
+            <h3>Informações de Contato</h3>
+            <address>
+                <p><b class="contato">Cidade:</b> Ponta Grossa, PR</p>
+                <p><b class="contato">Telefone:</b> <a href="tel:+5542998123456"
+                                                       aria-label="Ligar para +55 (42) 998123456">+55 (42) 998123456</a>
+                </p>
+                <p><b class="contato">E-mail:</b> <a href="mailto:contato@info.com"
+                                                     aria-label="Enviar e-mail para contato@info.com">contato@info.com</a>
+                </p>
+            </address>
+            <ul class="redesSociais">
+                <li>
+                    <a href="#" aria-label="Ir para o Facebook">
+                        <img src="assets/icon-redes/facebook-box-fill.png" alt="Facebook"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Ir para o Instagram">
+                        <img src="assets/icon-redes/instagram-fill.png" alt="Instagram"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Ir para o LinkedIn">
+                        <img src="assets/icon-redes/linkedin-box-fill.png" alt="LinkedIn"/>
+                    </a>
+                </li>
+            </ul>
         </article>
-      </section>
+    </section>
 
-      <section class="copy-container">
-        <p class="copy">
-          UTFPR 2023. Todos os direitos reservados &copy;. v1.0.0
-        </p>
-      </section>
-    </footer>
+    <section class="copy-container">
+        <p class="copy">UTFPR 2023. Todos os direitos reservados &copy;. v1.0.0</p>
+    </section>
+</footer>
 
-    <a href="#" class="scrollup" id="scroll-up">
-      <img src="assets/icon-redes/arrow-up-line.png" alt="" />
-    </a>
 
-    <script src="assets/js/menu/MenuScript.js"></script>
-    <script src="assets/js/carrossel/CarrosselScript.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+<a href="#" class="scrollup" id="scroll-up">
+    <img src="assets/icon-redes/arrow-up-line.png" alt=""/>
+</a>
+
+<script src="assets/js/menu/MenuScript.js"></script>
+<script src="assets/js/carrossel/CarrosselScript.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>

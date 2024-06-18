@@ -66,3 +66,5 @@ for (let i = 0; i < btnComprarCard.length; i++) {
     showToast(nomes[i].textContent);
   });
 }
+
+
