@@ -38,12 +38,18 @@ window.onload = function () {
       let inputQuantidade = document.createElement("input");
       inputQuantidade.type = "number";
       inputQuantidade.value = pedidos.quantidade[i];
+      inputQuantidade.min = "1";
       inputQuantidade.className = "quantidadeProd";
       tdQuantidade.appendChild(inputQuantidade);
       tr.appendChild(tdQuantidade);
 
       inputQuantidade.addEventListener("input", function (e) {
-        pedidos.quantidade[i] = e.target.value;
+        let valor = parseInt(e.target.value);
+        if (valor < 1) {
+          e.target.value = 1;
+          valor = 1;
+        }
+        pedidos.quantidade[i] = valor;
 
         var valorTotal = 0;
         for (let i = 0; i < pedidos.preco.length; i++) {
@@ -101,7 +107,7 @@ window.onload = function () {
 
           msg.style.display = "block";
         } else {
-          msg.textContent = "Cupom iválido";
+          msg.textContent = "Cupom inválido";
           msg.style.color = "red";
           msg.style.display = "block";
         }
@@ -128,7 +134,7 @@ btnFinalizar.addEventListener("click", () => {
   } else {
     msgCompraFinalizada.style.display = "block";
     msgCompraFinalizada.textContent =
-      "Por favor, realize um cadastro para finalizar a uma compra.";
+      "Por favor, realize um cadastro para finalizar a compra.";
 
     msgCompraFinalizada.style.borderBottom = "3px solid red";
   }

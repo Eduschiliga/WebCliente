@@ -1,674 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Produtos</title>
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css"/>
-    <link rel="stylesheet" href="assets/css/produtos/EstiloFiltro.css"/>
-    <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css"/>
-    <link rel="stylesheet" href="assets/css/modal/EstiloModal.css"/>
-    <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css"/>
-    <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-            rel="stylesheet"
-    />
-    <link
-            rel="shortcut icon"
-            href="assets/favicon/favicon.ico"
-            type="image/x-icon"
-    />
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produtos</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css"/>
+  <link rel="stylesheet" href="assets/css/produtos/EstiloFiltro.css"/>
+  <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css"/>
+  <link rel="stylesheet" href="assets/css/modal/EstiloModal.css"/>
+  <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
 <body>
 <div id="toastBox"></div>
 
 <header class="header">
-    <nav class="nav" role="navigation" aria-label="Menu principal">
-        <a href="informacoes.html" id="nomeUser" class="nome-usuario">Usuário</a>
-        <button class="hamburger" aria-label="Abrir menu">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-        <ul class="nav-list">
-            <li>
-                <a href="index.html" class="active-link" aria-label="Página inicial">
-                    <span class="material-symbols-outlined">home</span>
-                    <span>Início</span>
-                </a>
-            </li>
-            <li>
-                <a href="produtos.html" aria-label="Página de produtos">
-                    <span class="material-symbols-outlined">shopping_bag</span>
-                    <span>Produtos</span>
-                </a>
-            </li>
-            <li>
-                <a href="carrinho.html" aria-label="Página do carrinho">
-                    <span class="material-symbols-outlined">shopping_cart</span>
-                    <span>Carrinho</span>
-                </a>
-            </li>
-            <li>
-                <a href="formulario.html" class="cadastrar" id="cadastrarUser" aria-label="Página de cadastro">
-                    <span class="material-symbols-outlined">person_add</span>
-                    <span>Cadastrar</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Início</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Produtos</li>
-        </ol>
-    </nav>
+  <nav class="nav" role="navigation" aria-label="Menu principal">
+    <a href="informacoes.html" id="nomeUser" class="nome-usuario">Usuário</a>
+    <button class="hamburger" aria-label="Abrir menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html" class="active-link" aria-label="Página inicial">
+          <span class="material-symbols-outlined">home</span>
+          <span>Início</span>
+        </a>
+      </li>
+      <li>
+        <a href="produtos.html" aria-label="Página de produtos">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span>Produtos</span>
+        </a>
+      </li>
+      <li>
+        <a href="carrinho.html" aria-label="Página do carrinho">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span>Carrinho</span>
+        </a>
+      </li>
+      <li>
+        <a href="mapa.html" aria-label="Página de Mapa">
+          <span class="material-symbols-outlined">map</span>
+          <span>Mapa</span>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="sobre.html" aria-label="Página de Sobre">
+          <span class="material-symbols-outlined">info</span>
+          <span>Sobre</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="contato.html" aria-label="Página de Sobre">
+          <span class="material-symbols-outlined">call</span>
+          <span>Contato</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="formulario.html" class="cadastrar" id="cadastrarUser" aria-label="Página de cadastro">
+          <span class="material-symbols-outlined">person_add</span>
+          <span>Cadastrar</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Produtos</li>
+    </ol>
+  </nav>
 </header>
 
 <main>
-
-    <section>
-        <h1 class="title">Produtos em Destaque</h1>
-        <h3 class="title">Confira o melhor do mercado!</h3>
-        <br><br>
-        <div class="container-filto">
-            <div class="search-bar">
-                <label for="searchInput" id="lblSearch" class="sr-only">Buscar Produto</label>
-                <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Digite o nome do produto..."/>
-                    <span class="material-symbols-outlined search-icon">search</span>
-                </div>
-            </div>
-
-            <br>
-            <div class="container-select">
-                <label for="preco" id="lblPreco">Preço</label>
-                <select id="preco" name="preco">
-                    <option value="">Selecione</option>
-                    <option value="maior">Maior</option>
-                    <option value="menor">Menor</option>
-                </select>
-
-                <label for="ordemAlfa" id="lblOrdemAlfa">Ordem Alfabética</label>
-                <select id="ordemAlfa" name="ordemAlfa">
-                    <option value="">Selecione</option>
-                    <option value="AZ">A-Z</option>
-                    <option value="ZA">Z-A</option>
-                </select>
-            </div>
+  <section>
+    <h1 class="title">Produtos em Destaque</h1>
+    <h3 class="title">Confira o melhor do mercado!</h3>
+    <br><br>
+    <div class="container-filto">
+      <div class="search-bar">
+        <label for="searchInput" id="lblSearch" class="sr-only">Buscar Produto</label>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Digite o nome do produto..."/>
+          <span class="material-symbols-outlined search-icon">search</span>
         </div>
 
-        <div class="container-produtos" id="containerProdutos">
-            <div class="card">
-                <img
-                        src="assets/img-produtos/abacaxi.jpg"
-                        alt=""
-                        class="open-modal-prod1"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod1">Abacaxi</h3>
-                    <p>Peso aprixmado 1,61 Kg / Unidade. O Abacaxi é rico....</p>
-                    <span
-                    >R$ <span id="precoInteiro">120</span
-                    ><sup id="precoDecimal">40</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
+      </div>
+      <p id="mensagemErro" style="display: none;" class="msgBusca">Nenhum produto encontrado.</p>
 
-            <div id="fade-prod1" class="hide"></div>
-            <div id="modal-prod1" class="hide">
-                <div class="modal-header">
-                    <h2>Abacaxi</h2>
-                    <button id="close-modal-prod1">Fechar</button>
-                </div>
+      <br>
+      <div class="container-select">
+        <label for="categoria" id="lblCategoria">Categoria</label>
+        <select id="categoria" name="categoria">
+          <option value="">Selecione</option>
+          <option value="frutas">Frutas</option>
+          <option value="eletronicos">Eletrônicos</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="doces">Doces</option>
+        </select>
 
-                <div class="modal-body">
-                    <img src="assets/img-produtos/abacaxi.jpg" alt=""/>
-                    <p>
-                        Peso Aproximado 1,61 Kg / Unidade. O Abacaxi é rico em Vitaminas
-                        A, B5, B6, C, BetaCaroteno, Tiamina, Antioxidantes e Fibras,
-                        auxiliando na saciedade e regulação do peso. É uma Importante
-                        fonte de energia póstreino. Auxilia nos processos
-                        antiinflamatórios por conter Bromelina, enzima encontrada
-                        principalmente no talo da fruta.
-                    </p>
+        <label for="preco" id="lblPreco">Preço</label>
+        <select id="preco" name="preco">
+          <option value="">Selecione</option>
+          <option value="maior">Maior</option>
+          <option value="menor">Menor</option>
+        </select>
 
-                    <span
-                    >R$ <span class="precoInt">120</span
-                    ><sup class="precoFloat">40</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
+        <label for="ordemAlfa" id="lblOrdemAlfa" style="display: none">Ordem Alfabética</label>
+        <select id="ordemAlfa" name="ordemAlfa"  style="display: none">
+          <option value="">Selecione</option>
+          <option value="AZ">A-Z</option>
+          <option value="ZA">Z-A</option>
+        </select>
+      </div>
+    </div>
 
-            <div class="card" id="produto2">
-                <img
-                        src="assets/img-produtos/PC-Gamer.jpg"
-                        alt=""
-                        class="open-modal-prod2"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod2">Pc Gamer</h3>
-                    <p>PC Gamer de Alta Performance...</p>
-                    <span
-                    >R$ <span id="precoInteiro">3500</span
-                    ><sup id="precoDecimal">00</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod2" class="hide"></div>
-            <div id="modal-prod2" class="hide">
-                <div class="modal-header">
-                    <h2>Pc Gamer</h2>
-                    <button id="close-modal-prod2">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/PC-Gamer.jpg" alt=""/>
-                    <p>Este PC Gamer é ideal para jogadores que exigem o melhor em termos de desempenho e qualidade.
-                        Seja para jogos competitivos ou para mergulhar em mundos imersivos, este PC oferece tudo o que
-                        você precisa.</p>
-                    <span
-                    >R$ <span class="precoInt">3500</span
-                    ><sup class="precoFloat">00</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto3">
-                <img
-                        src="assets/img-produtos/banana.jpg"
-                        alt=""
-                        class="open-modal-prod3"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod3">Banana</h3>
-                    <p>A Banana Prata é uma fruta muito querida pelos....</p>
-                    <span
-                    >R$ <span id="precoInteiro">199</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod3" class="hide"></div>
-            <div id="modal-prod3" class="hide">
-                <div class="modal-header">
-                    <h2>Este é o meu modal</h2>
-                    <button id="close-modal-prod3">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/banana.jpg" alt=""/>
-                    <p>
-                        A Banana Prata é uma fruta muito querida pelos brasileiros. Além
-                        de muito saborosa, traz benefícios para a saúde, pois contém
-                        carboidratos, vitaminas e minerais. Por exemplo, faz bem ao
-                        intestino e ao coração. A Banana Prata pode ser consumida in
-                        natura mesmo, banana à milanesa, banana assada, banana com
-                        aveia, entre outras possibilidades.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">199</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto4">
-                <img
-                        src="assets/img-produtos/abacate.jpg"
-                        alt=""
-                        class="open-modal-prod4"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod4">Abacate</h3>
-                    <p>O Abacate é uma das frutas mais completas para a saúde....</p>
-                    <span
-                    >R$ <span id="precoInteiro">19</span
-                    ><sup id="precoDecimal">50</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod4" class="hide"></div>
-            <div id="modal-prod4" class="hide">
-                <div class="modal-header">
-                    <h2>Abacate</h2>
-                    <button id="close-modal-prod4">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/abacate.jpg" alt=""/>
-                    <p>
-                        O Abacate é uma das frutas mais completas para a saúde. Rico em
-                        Ômega 3, Vitamina C, Ácido Fólico, Magnésio, Antioxidantes e
-                        Fibras. É ótimo para pele, pois estimula a produção de colágeno.
-                        É uma Importante fonte de energia pós treino. Auxilia na
-                        capacidade da memória e circulação sanguínea. Experimente em
-                        vitaminas, cremes, saladas, guacamole e até em brigadeiros.
-                        Características importantes: polpa macia, gordurosa, uma das
-                        frutas com maior teor de proteína que existe.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">19</span
-                    ><sup id="precoDecimal">50</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto5">
-                <img
-                        src="assets/img-produtos/dolly.jpg"
-                        alt=""
-                        class="open-modal-prod5"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod5">Dolly</h3>
-                    <p>Dolly é presença na mesa dos brasileiros desde 1987, é....</p>
-                    <span
-                    >R$ <span id="precoInteiro">20</span
-                    ><sup id="precoDecimal">00</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod5" class="hide"></div>
-            <div id="modal-prod5" class="hide">
-                <div class="modal-header">
-                    <h2>Dolly</h2>
-                    <button id="close-modal-prod5">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/dolly.jpg" alt=""/>
-                    <p>
-                        Dolly é presença na mesa dos brasileiros desde 1987, é um
-                        refrigerante feito com o extrato natural da própria fruta, é
-                        ideal para ser servida bem gelada em ocasiões especiais,
-                        almoços, jantares, lanches e churrascos.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">20</span
-                    ><sup id="precoDecimal">00</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto6">
-                <img
-                        src="assets/img-produtos/fini.jpg"
-                        alt=""
-                        class="open-modal-prod6"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod6">Fini</h3>
-                    <p>
-                        A Bala de Gelatina Beijos Morango Fini é feita com gelatina....
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">8</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod6" class="hide"></div>
-            <div id="modal-prod6" class="hide">
-                <div class="modal-header">
-                    <h2>Fini</h2>
-                    <button id="close-modal-prod6">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/fini.jpg" alt=""/>
-                    <p>
-                        A Bala de Gelatina Beijos Morango Fini é feita com gelatina
-                        natural, um complemento alimentar nutritivo e saudável. O
-                        formato das balas são divertidos e atrativos e os sabores são
-                        exclusivos. As embalagens são projetadas para uma melhor
-                        conservação, destacando assim, a aparência do produto.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">8</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto7">
-                <img
-                        src="assets/img-produtos/laranja.jpg"
-                        alt=""
-                        class="open-modal-prod7"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod7">Laranja</h3>
-                    <p>A laranja Pêra é uma variedade de laranja de casca fina....</p>
-                    <span
-                    >R$ <span id="precoInteiro">2</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod7" class="hide"></div>
-            <div id="modal-prod7" class="hide">
-                <div class="modal-header">
-                    <h2>Laranja</h2>
-                    <button id="close-modal-prod7">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/laranja.jpg" alt=""/>
-                    <p>
-                        A laranja Pêra é uma variedade de laranja de casca fina e fácil
-                        de descascar, com polpa suculenta e doce. É uma boa fonte de
-                        nutrientes, como vitamina C e fibras, e é frequentemente
-                        consumida in natura ou utilizada na preparação de sucos, saladas
-                        de frutas, bolos, tortas e outros pratos doces. A laranja Pêra é
-                        uma das variedades mais comuns de laranja encontradas no Brasil
-                        e é apreciada por seu sabor suave e refrescante. Além disso, é
-                        uma fruta com baixo teor de gordura e calorias, o que a torna
-                        uma opção saudável para quem busca uma alimentação equilibrada.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">2</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto8">
-                <img
-                        src="assets/img-produtos/notebook.jpg"
-                        alt=""
-                        class="open-modal-prod8"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod8">Notebook</h3>
-                    <p>Navegue, explore e conecte-se com confiança no Lenovo....</p>
-                    <span
-                    >R$ <span id="precoInteiro">2005</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod8" class="hide"></div>
-            <div id="modal-prod8" class="hide">
-                <div class="modal-header">
-                    <h2>Notebook</h2>
-                    <button id="close-modal-prod8">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/notebook.jpg" alt=""/>
-                    <p>
-                        Navegue, explore e conecte-se com confiança no Lenovo IdeaPad 1
-                        alimentado pelos processadores da série AMD Ryzen 7000. O
-                        IdeaPad 1 combina desempenho responsivo em um chassi fino e
-                        compacto de 17,9 mm, favorecendo a multitarefa onde você
-                        estiver. Tire o máximo do seu dispositivo com uma tela com
-                        moldura super estreita e longas horas de duração da bateria e
-                        carga rápida.
-                    </p>
-
-                    <span
-                    >R$ <span id="precoInteiro">2005</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto9">
-                <img
-                        src="assets/img-produtos/monitor.jpg"
-                        alt=""
-                        class="open-modal-prod9"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod9">Monitor</h3>
-                    <p>Com uma tela de 34" QHD, o MONITOR GAMER XZ2 XZ342CU....</p>
-                    <span
-                    >R$ <span id="precoInteiro">550</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod9" class="hide"></div>
-            <div id="modal-prod9" class="hide">
-                <div class="modal-header">
-                    <h2>Monitor</h2>
-                    <button id="close-modal-prod9">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/monitor.jpg" alt=""/>
-                    <p>
-                        Com uma tela de 34" QHD, o MONITOR GAMER XZ2 XZ342CU Nitro
-                        entrega imagens mais nítidas, levando sua experiência visual e
-                        seu foco no jogo para um novo nível. O XZ2 Nitro conta com uma
-                        alta taxa de atualização de até 165Hz e até 1 ms VRB de tempo de
-                        resposta. Prepare-se para ver imagens mais suaves, sem rastros e
-                        sem rasgos. Com o Visual Response Boost (VRB) de 1 ms, o monitor
-                        reduz borrões, efeitos fantasmas e manchas nas imagens.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">550</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto10">
-                <img
-                        src="assets/img-produtos/teclado.jpg"
-                        alt=""
-                        class="open-modal-prod10"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod10">Teclado</h3>
-                    <p>O Teclado Gamer Fizz Redragon é ideal para jogadores....</p>
-                    <span
-                    >R$ <span id="precoInteiro">350</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod10" class="hide"></div>
-            <div id="modal-prod10" class="hide">
-                <div class="modal-header">
-                    <h2>Teclado</h2>
-                    <button id="close-modal-prod10">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/teclado.jpg" alt=""/>
-                    <p>
-                        O Teclado Gamer Fizz Redragon é ideal para jogadores que
-                        procuram boa performance e design compacto em um layout ABNT2. O
-                        Redragon é feito em plástico ABS de alta qualidade e as keycaps
-                        são feitas com o método de double-shot injection, fazendo com
-                        que o teclado tenha mais longevidade. Remova de forma rápida e
-                        simples o cabo USB-C e tenha a praticidade de carregar seu
-                        teclado com você.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">350</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto11">
-                <img
-                        src="assets/img-produtos/cabo_de_rede.jpg"
-                        alt=""
-                        class="open-modal-prod11"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod11">Cado de rede</h3>
-                    <p>Cabo de rede de ótima qualidade. Ideal para instalação....</p>
-                    <span
-                    >R$ <span id="precoInteiro">35</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod11" class="hide"></div>
-            <div id="modal-prod11" class="hide">
-                <div class="modal-header">
-                    <h2>Cabo de rede</h2>
-                    <button id="close-modal-prod11">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/cabo_de_rede.jpg" alt=""/>
-                    <p>
-                        Cabo de rede de ótima qualidade. Ideal para instalação
-                        residencial e empresarial, pois foi desenvolvido com a mais alta
-                        tecnologia na confecção de cabos patch cord, com ótimo
-                        acabamento.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">35</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card" id="produto12">
-                <img
-                        src="assets/img-produtos/mouse.jpg"
-                        alt=""
-                        class="open-modal-prod12"
-                />
-                <div class="card-content">
-                    <h3 class="open-modal-prod12">Mouse</h3>
-                    <p>Um verdadeiro mouse gamer, ideal para longas horas de....</p>
-                    <span
-                    >R$ <span id="precoInteiro">60</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar">Comprar</a>
-                </div>
-            </div>
-
-            <div id="fade-prod12" class="hide"></div>
-            <div id="modal-prod12" class="hide">
-                <div class="modal-header">
-                    <h2>Mouse</h2>
-                    <button id="close-modal-prod12">Fechar</button>
-                </div>
-
-                <div class="modal-body">
-                    <img src="assets/img-produtos/mouse.jpg" alt=""/>
-                    <p>
-                        Um verdadeiro mouse gamer, ideal para longas horas de jogatina,
-                        possue uma ótima pegada para que não sinta desconforto durante a
-                        seção.
-                    </p>
-                    <p>
-                        Feito com material para aumentar a durabilidade e evitar que
-                        escape no momento que mais precisa.
-                    </p>
-                    <span
-                    >R$ <span id="precoInteiro">60</span
-                    ><sup id="precoDecimal">99</sup></span
-                    >
-                    <a href="#" id="btnComprar" class="btn-modal">Comprar</a>
-                </div>
-            </div>
+    <div class="container-produtos" id="containerProdutos">
+      <p id="mensagemErro" style="display: none;" class="msgBusca">Nenhum produto encontrado.</p>
+      <div class="card" id="produto1">
+        <img src="assets/img-produtos/abacaxi.jpg" alt="" class="open-modal-prod1"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod1">Abacaxi</h3>
+          <p>Peso aproximado 1,61 Kg / Unidade. O Abacaxi é rico....</p>
+          <span>R$ <span id="precoInteiro">120</span><sup id="precoDecimal">40</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
         </div>
-    </section>
+      </div>
+      <div class="card" id="produto2">
+        <img src="assets/img-produtos/PC-Gamer.jpg" alt="" class="open-modal-prod2" width="300" height="315"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod2">Pc Gamer</h3>
+          <p>PC Gamer de Alta Performance...</p>
+          <span>R$ <span id="precoInteiro">3500</span><sup id="precoDecimal">00</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto3">
+        <img src="assets/img-produtos/banana.jpg" alt="" class="open-modal-prod3"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod3">Banana</h3>
+          <p>A Banana Prata é uma fruta muito querida pelos....</p>
+          <span>R$ <span id="precoInteiro">199</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto4">
+        <img src="assets/img-produtos/abacate.jpg" alt="" class="open-modal-prod4"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod4">Abacate</h3>
+          <p>O Abacate é uma das frutas mais completas para a saúde....</p>
+          <span>R$ <span id="precoInteiro">19</span><sup id="precoDecimal">50</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto5">
+        <img src="assets/img-produtos/dolly.jpg" alt="" class="open-modal-prod5"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod5">Dolly</h3>
+          <p>Dolly é presença na mesa dos brasileiros desde 1987, é....</p>
+          <span>R$ <span id="precoInteiro">20</span><sup id="precoDecimal">00</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto6">
+        <img src="assets/img-produtos/fini.jpg" alt="" class="open-modal-prod6"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod6">Fini</h3>
+          <p>A Bala de Gelatina Beijos Morango Fini é feita com gelatina....</p>
+          <span>R$ <span id="precoInteiro">8</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto7">
+        <img src="assets/img-produtos/laranja.jpg" alt="" class="open-modal-prod7"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod7">Laranja</h3>
+          <p>A laranja Pêra é uma variedade de laranja de casca fina....</p>
+          <span>R$ <span id="precoInteiro">2</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto8">
+        <img src="assets/img-produtos/notebook.jpg" alt="" class="open-modal-prod8"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod8">Notebook</h3>
+          <p>Navegue, explore e conecte-se com confiança no Lenovo....</p>
+          <span>R$ <span id="precoInteiro">2005</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto9">
+        <img src="assets/img-produtos/monitor.jpg" alt="" class="open-modal-prod9"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod9">Monitor</h3>
+          <p>Com uma tela de 34" QHD, o MONITOR GAMER XZ2 XZ342CU....</p>
+          <span>R$ <span id="precoInteiro">550</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto10">
+        <img src="assets/img-produtos/teclado.jpg" alt="" class="open-modal-prod10"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod10">Teclado</h3>
+          <p>O Teclado Gamer Fizz Redragon é ideal para jogadores....</p>
+          <span>R$ <span id="precoInteiro">350</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto11">
+        <img src="assets/img-produtos/cabo_de_rede.jpg" alt="" class="open-modal-prod11"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod11">Cabo de rede</h3>
+          <p>Cabo de rede de ótima qualidade. Ideal para instalação....</p>
+          <span>R$ <span id="precoInteiro">35</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+      <div class="card" id="produto12">
+        <img src="assets/img-produtos/mouse.jpg" alt="" class="open-modal-prod12"/>
+        <div class="card-content">
+          <h3 class="open-modal-prod12">Mouse</h3>
+          <p>Um verdadeiro mouse gamer, ideal para longas horas de....</p>
+          <span>R$ <span id="precoInteiro">60</span><sup id="precoDecimal">99</sup></span>
+          <a href="#" id="btnComprar">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
-    <section class="container-footer">
-        <article class="links-footer">
-            <h3>Acesso Rápido</h3>
-            <ul class="lista-footer">
-                <li><a href="index.html" class="link-footer" aria-label="Ir para a página inicial">Início</a></li>
-                <li><a href="produtos.html" class="link-footer" aria-label="Ir para a página de produtos">Produtos</a>
-                </li>
-                <li><a href="carrinho.html" class="link-footer" aria-label="Ir para a página do carrinho">Carrinho</a>
-                </li>
-                <li><a href="termosEcondicoes.html" class="link-footer" aria-label="Termos e Condições">Termos e
-                    Condições</a>
-                </li>
-            </ul>
-        </article>
+  <section class="container-footer">
+    <article class="links-footer">
+      <h3>Acesso Rápido</h3>
+      <ul class="lista-footer">
+        <li><a href="index.html" class="link-footer" aria-label="Ir para a página inicial">Início</a></li>
+        <li><a href="produtos.html" class="link-footer" aria-label="Ir para a página de produtos">Produtos</a></li>
+        <li><a href="carrinho.html" class="link-footer" aria-label="Ir para a página do carrinho">Carrinho</a></li>
+        <li><a href="mapa.html" class="link-footer" aria-label="Ir para a página do mapa">Mapa do site</a></li>
+        <li><a href="sobre.html" class="link-footer" aria-label="Ir para a página de sobre">Sobre</a></li>
+        <li><a href="contato.html" class="link-footer" aria-label="Ir para a página de contato">Contato</a></li>
+        <li><a href="termosEcondicoes.html" class="link-footer" aria-label="Termos e Condições">Termos e Condições</a>
+        </li>
+      </ul>
+    </article>
 
-        <article class="descricao-footer">
-            <h3>UTFPR</h3>
-            <p>Junte-se a nós e descubra um mundo de possibilidades de compras com facilidade e confiança.</p>
-        </article>
+    <article class="descricao-footer">
+      <h3>UTFPR</h3>
+      <p>Junte-se a nós e descubra um mundo de possibilidades de compras com facilidade e confiança.</p>
+    </article>
 
-        <article>
-            <h3>Informações de Contato</h3>
-            <address>
-                <p><b class="contato">Cidade:</b> Ponta Grossa, PR</p>
-                <p><b class="contato">Telefone:</b> <a href="tel:+5542998123456"
-                                                       aria-label="Ligar para +55 (42) 998123456">+55 (42) 998123456</a>
-                </p>
-                <p><b class="contato">E-mail:</b> <a href="mailto:contato@info.com"
-                                                     aria-label="Enviar e-mail para contato@info.com">contato@info.com</a>
-                </p>
-            </address>
-            <ul class="redesSociais">
-                <li>
-                    <a href="#" aria-label="Ir para o Facebook">
-                        <img src="assets/icon-redes/facebook-box-fill.png" alt="Facebook"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Ir para o Instagram">
-                        <img src="assets/icon-redes/instagram-fill.png" alt="Instagram"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Ir para o LinkedIn">
-                        <img src="assets/icon-redes/linkedin-box-fill.png" alt="LinkedIn"/>
-                    </a>
-                </li>
-            </ul>
-        </article>
-    </section>
-
-    <section class="copy-container">
-        <p class="copy">UTFPR 2023. Todos os direitos reservados &copy;. v1.0.0</p>
-    </section>
+    <article>
+      <h3>Informações de Contato</h3>
+      <address>
+        <p><b class="contato">Cidade:</b> Ponta Grossa, PR</p>
+        <p><b class="contato">Telefone:</b> <a href="tel:+5542998123456" aria-label="Ligar para +55 (42) 998123456">+55
+          (42) 998123456</a></p>
+        <p><b class="contato">E-mail:</b> <a href="mailto:contato@info.com"
+                                             aria-label="Enviar e-mail para contato@info.com">contato@info.com</a></p>
+      </address>
+      <ul class="redesSociais">
+        <li>
+          <a href="#" aria-label="Ir para o Facebook">
+            <img src="assets/icon-redes/facebook-box-fill.png" alt="Facebook"/>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Ir para o Instagram">
+            <img src="assets/icon-redes/instagram-fill.png" alt="Instagram"/>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Ir para o LinkedIn">
+            <img src="assets/icon-redes/linkedin-box-fill.png" alt="LinkedIn"/>
+          </a>
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="copy-container">
+    <p class="copy">UTFPR 2023. Todos os direitos reservados &copy;. v1.0.0</p>
+  </section>
 </footer>
 
 <a href="#" class="scrollup" id="scroll-up">
-    <img src="assets/icon-redes/arrow-up-line.png" alt=""/>
+  <img src="assets/icon-redes/arrow-up-line.png" alt=""/>
 </a>
 
 <script src="assets/js/main.js"></script>

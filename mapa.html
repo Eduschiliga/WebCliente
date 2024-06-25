@@ -3,23 +3,18 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrinho de Compras</title>
+  <title>Mapa do Site</title>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="stylesheet" href="assets/css/menu/EstiloMenu.css"/>
+  <link rel="stylesheet" href="assets/css/carrossel/EstiloCarrossel.css"/>
   <link rel="stylesheet" href="assets/css/produtos/EstiloProdutos.css"/>
+  <link rel="stylesheet" href="assets/css/metodos-pag/EstiloMetodosPag.css"/>
   <link rel="stylesheet" href="assets/css/footer/EstiloFooter.css"/>
-  <link rel="stylesheet" href="assets/css/carrinho/EstiloCarrinho.css"/>
-  <link
-      rel="shortcut icon"
-      href="assets/favicon/favicon.ico"
-      type="image/x-icon"
-  />
-  <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
-  />
+  <link rel="stylesheet" href="assets/css/mapa/mapa.css"/>
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 <header class="header">
@@ -30,7 +25,7 @@
     </button>
     <ul class="nav-list">
       <li>
-        <a href="index.html" class="active-link" aria-label="Página inicial">
+        <a href="index.html" aria-label="Página inicial" style="color: black !important;">
           <span class="material-symbols-outlined">home</span>
           <span>Início</span>
         </a>
@@ -47,15 +42,12 @@
           <span>Carrinho</span>
         </a>
       </li>
-
       <li>
-        <a href="mapa.html" aria-label="Página de Mapa">
+        <a href="mapa.html" class="active-link" aria-label="Página de Mapa">
           <span class="material-symbols-outlined">map</span>
           <span>Mapa</span>
         </a>
       </li>
-
-
       <li>
         <a href="sobre.html" aria-label="Página de Sobre">
           <span class="material-symbols-outlined">
@@ -64,14 +56,12 @@ info
           <span>Sobre</span>
         </a>
       </li>
-
       <li>
         <a href="contato.html" aria-label="Página de Sobre">
           <span class="material-symbols-outlined">call</span>
           <span>Contato</span>
         </a>
       </li>
-
       <li>
         <a href="formulario.html" class="cadastrar" id="cadastrarUser" aria-label="Página de cadastro">
           <span class="material-symbols-outlined">person_add</span>
@@ -80,59 +70,55 @@ info
       </li>
     </ul>
   </nav>
+
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.html">Início</a></li>
-      <li class="breadcrumb-item"><a href="produtos.html">Produtos</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Carrinho</li>
+      <li class="breadcrumb-item active" aria-current="page">Mapa do site</li>
     </ol>
   </nav>
 </header>
 
-<main
-    style="background: white; padding: 0 32px; border-radius: var(--border-radius); box-shadow: var(--shadow); justify-content: start !important;">
-
-  <section class="container-carrinho">
-    <h1>Checkout de Compras</h1>
-    <table>
-      <thead>
-      <tr>
-        <th>Nome do Produto</th>
-        <th>Preço</th>
-        <th>Quantidade</th>
-        <th>Função</th>
-      </tr>
-      </thead>
-
-      <tbody></tbody>
-    </table>
-  </section>
-
-  <div class="container-info">
-    <div class="container-valor">
-      <div>
-        <label>Método de pagamento</label>
-        <select>
-          <option value="cred">Selecione uma forma de pagamento</option>
-          <option value="cred">Cartão de Crédito</option>
-          <option value="deb">Cartão de Débito</option>
-          <option value="pix">Pix</option>
-          <option value="bol">Boleto Bancário</option>
-        </select>
-      </div>
-
-      <div>
-        <span>Aplicar cupom de desconto</span>
-
-        <input type="text" name="cupomDesc" id="cupomDesc"/>
-        <p id="msgCupom"></p>
-      </div>
-
-      <h3>Valor total: <span id="valorTotal"></span></h3>
+<main style="margin: 0 auto; width: 60vw; padding: 16px">
+  <section>
+    <div class="mapa" style="margin-bottom: 15px">
+      <h1>Mapa do Site</h1>
+      <br>
+      <br>
+      <ul>
+        <li>
+          <a href="index.html" aria-label="Página inicial">
+            <span>Início</span>
+          </a>
+        </li>
+        <li>
+          <a href="produtos.html" aria-label="Página de produtos">
+            <span>Produtos</span>
+          </a>
+        </li>
+        <li>
+          <a href="carrinho.html" aria-label="Página do carrinho">
+            <span>Carrinho</span>
+          </a>
+        </li>
+        <li>
+          <a href="sobre.html" aria-label="Página de Sobre">
+            <span>Sobre</span>
+          </a>
+        </li>
+        <li>
+          <a href="contato.html" aria-label="Página de Contato">
+            <span>Contato</span>
+          </a>
+        </li>
+        <li>
+          <a href="mapa.html" aria-label="Página de Mapa">
+            <span>Mapa</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    <button type="button" id="finalizarCompra">Finalizar Compra</button>
-    <span id="msg-compra-finalizada"></span>
-  </div>
+  </section>
 </main>
 
 <footer>
@@ -141,16 +127,13 @@ info
       <h3>Acesso Rápido</h3>
       <ul class="lista-footer">
         <li><a href="index.html" class="link-footer" aria-label="Ir para a página inicial">Início</a></li>
-        <li><a href="produtos.html" class="link-footer" aria-label="Ir para a página de produtos">Produtos</a>
-        </li>
-        <li><a href="carrinho.html" class="link-footer" aria-label="Ir para a página do carrinho">Carrinho</a>
-        </li>
-        <li><a href="mapa.html" class="link-footer" aria-label="Ir para a página do mapa">Mapa do site</a>
-        </li>
+        <li><a href="produtos.html" class="link-footer" aria-label="Ir para a página de produtos">Produtos</a></li>
+        <li><a href="carrinho.html" class="link-footer" aria-label="Ir para a página do carrinho">Carrinho</a></li>
+        <li><a href="mapa.html" class="link-footer" aria-label="Ir para a página do mapa">Mapa do site</a></li>
         <li><a href="sobre.html" class="link-footer" aria-label="Ir para a página de sobre">Sobre</a></li>
         <li><a href="contato.html" class="link-footer" aria-label="Ir para a página de contato">Contato</a></li>
-        <li><a href="termosEcondicoes.html" class="link-footer" aria-label="Termos e Condições">Termos e
-          Condições</a></li>
+        <li><a href="termosEcondicoes.html" class="link-footer" aria-label="Termos e Condições">Termos e Condições</a>
+        </li>
       </ul>
     </article>
 
@@ -163,12 +146,10 @@ info
       <h3>Informações de Contato</h3>
       <address>
         <p><b class="contato">Cidade:</b> Ponta Grossa, PR</p>
-        <p><b class="contato">Telefone:</b> <a href="tel:+5542998123456"
-                                               aria-label="Ligar para +55 (42) 998123456">+55 (42) 998123456</a>
-        </p>
+        <p><b class="contato">Telefone:</b> <a href="tel:+5542998123456" aria-label="Ligar para +55 (42) 998123456">+55
+          (42) 998123456</a></p>
         <p><b class="contato">E-mail:</b> <a href="mailto:contato@info.com"
-                                             aria-label="Enviar e-mail para contato@info.com">contato@info.com</a>
-        </p>
+                                             aria-label="Enviar e-mail para contato@info.com">contato@info.com</a></p>
       </address>
       <ul class="redesSociais">
         <li>
@@ -199,8 +180,10 @@ info
   <img src="assets/icon-redes/arrow-up-line.png" alt=""/>
 </a>
 
-<script src="assets/js/menu/MenuScript.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/carrinho/CarrinhoScript.js" defer></script>
+<script src="assets/js/menu/MenuScript.js"></script>
+<script src="assets/js/produtos/FiltroScript.js"></script>
+<script src="assets/js/modal/modalScript.js"></script>
+<script src="assets/js/produtos/ProdutosScript.js"></script>
 </body>
 </html>

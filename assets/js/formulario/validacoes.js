@@ -39,6 +39,50 @@ let isValidNumero = false;
 let isValidDataNasc = false;
 let isValidSenha = false;
 
+function validateCEP(cep) {
+  return /^[0-9]{8}$/.test(cep);
+}
+
+async function buscarCep(cep) {
+  const cepLbl = document.querySelector("#lblCep");
+
+  if (!validateCEP(cep)) {
+    cepLbl.setAttribute("style", "color: red");
+    cepLbl.innerHTML = "CEP * Deve conter 8 caracteres *";
+    return;
+  }
+
+  try {
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const data = await response.json();
+
+    if (data.erro) {
+      cepLbl.setAttribute("style", "color: red");
+      cepLbl.innerHTML = "CEP * CEP não encontrado *";
+      return;
+    }
+
+    // Preenchendo os campos com os dados do endereço
+    document.querySelector("#cidade").value = data.localidade;
+    document.querySelector("#uf").value = data.uf;
+
+    // Atualizando o estilo dos labels
+    cepLbl.setAttribute("style", "color: green");
+    cepLbl.innerHTML = "CEP";
+    document.querySelector("#lblCidade").setAttribute("style", "color: green");
+    document.querySelector("#lblUf").setAttribute("style", "color: green");
+  } catch (error) {
+    console.error("Erro ao buscar o CEP:", error);
+    cepLbl.setAttribute("style", "color: red");
+    cepLbl.innerHTML = "CEP * Erro ao buscar CEP *";
+  }
+}
+
+function cancelar() {
+  document.getElementById("formCadastro").reset();
+}
+
+
 // mensagens de erro
 const msgError = document.querySelector("#msgError");
 const msgSuccess = document.querySelector("#msgSuccess");

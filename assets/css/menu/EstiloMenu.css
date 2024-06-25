@@ -44,15 +44,16 @@ a {
     align-items: center;
     justify-content: center;
 
-    li a{
+    li a {
         display: flex;
         gap: var(--gap-small);
         list-style: none;
-        align-items: center!important;
+        align-items: center !important;
         justify-content: center;
     }
 }
-.nav-list li:nth-child(4) a {
+
+.nav-list li:nth-child(7) a {
     color: var(--color-white);
 }
 

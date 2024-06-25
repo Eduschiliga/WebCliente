@@ -1,0 +1,32 @@
+.mapa {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.06);
+    height: 50vh;
+}
+
+.mapa h1 {
+    margin: 0;
+}
+
+.mapa ul {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.mapa ul li a {
+    color: darkslateblue !important;
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+.active-link {
+    color: var(--secondary-color) !important;
+}
